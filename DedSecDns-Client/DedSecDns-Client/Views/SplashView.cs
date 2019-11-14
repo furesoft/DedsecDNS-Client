@@ -46,7 +46,7 @@ namespace DedSecDns_Client
 
             await Task.Delay(1500);
 
-            AppManager.Instance.Load<MainViewController>();
+            AppManager.Instance.Load<LoginViewController>();
         }
     }
 }

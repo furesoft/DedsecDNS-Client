@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace DedSecDns_Client.Views
 {
-    public partial class MainView : Form, IView
+    public partial class LoginView : Form, IView
     {
         public Form Form => this;
 
@@ -20,7 +20,7 @@ namespace DedSecDns_Client.Views
             }
         }
 
-        public MainView()
+        public LoginView()
         {
             InitializeComponent();
         }
