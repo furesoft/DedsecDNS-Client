@@ -1,4 +1,5 @@
-﻿using DedSecDns_Client.Models;
+﻿using DedSecDns_Client.Core;
+using DedSecDns_Client.Models;
 using Newtonsoft.Json;
 using RestSharp;
 
