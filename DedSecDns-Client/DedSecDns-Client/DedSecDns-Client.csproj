@@ -79,6 +79,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuthService.cs" />
     <Compile Include="Controllers\LoginViewController.cs" />
     <Compile Include="Controllers\MainViewController.cs" />
     <Compile Include="Controllers\SplashController.cs" />
