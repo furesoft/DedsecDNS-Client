@@ -64,6 +64,7 @@
             this.loginBtn.TabIndex = 0;
             this.loginBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
             this.loginBtn.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
             // 
             // registerBtn
             // 

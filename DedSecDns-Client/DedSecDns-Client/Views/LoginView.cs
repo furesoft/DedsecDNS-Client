@@ -24,5 +24,10 @@ namespace DedSecDns_Client.Views
         {
             InitializeComponent();
         }
+
+        private void loginBtn_Click(object sender, System.EventArgs e)
+        {
+            AuthService.Authenticate(usernameTb.Text, passwordTb.Text);
+        }
     }
 }
