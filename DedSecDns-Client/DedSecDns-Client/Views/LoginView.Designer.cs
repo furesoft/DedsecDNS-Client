@@ -34,9 +34,10 @@
             this.registerBtn = new XanderUI.XUIButton();
             this.usernameLbl = new System.Windows.Forms.Label();
             this.PasswordLbl = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.forgotPasswordLink = new System.Windows.Forms.LinkLabel();
             this.usernameTb = new System.Windows.Forms.TextBox();
             this.passwordTb = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // formDropShadow1
@@ -69,7 +70,7 @@
             // registerBtn
             // 
             this.registerBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(75)))));
-            this.registerBtn.ButtonImage = null;
+            this.registerBtn.ButtonImage = ((System.Drawing.Image)(resources.GetObject("registerBtn.ButtonImage")));
             this.registerBtn.ButtonStyle = XanderUI.XUIButton.Style.Material;
             this.registerBtn.ButtonText = "Registrieren";
             this.registerBtn.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(80)))));
@@ -82,7 +83,7 @@
             this.registerBtn.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
             this.registerBtn.Location = new System.Drawing.Point(12, 243);
             this.registerBtn.Name = "registerBtn";
-            this.registerBtn.Size = new System.Drawing.Size(200, 50);
+            this.registerBtn.Size = new System.Drawing.Size(216, 50);
             this.registerBtn.TabIndex = 1;
             this.registerBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
             this.registerBtn.Vertical_Alignment = System.Drawing.StringAlignment.Center;
@@ -107,16 +108,17 @@
             this.PasswordLbl.TabIndex = 3;
             this.PasswordLbl.Text = "Passwort";
             // 
-            // linkLabel1
+            // forgotPasswordLink
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(197, 201);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(161, 20);
-            this.linkLabel1.TabIndex = 4;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Passwort vergessen";
+            this.forgotPasswordLink.AutoSize = true;
+            this.forgotPasswordLink.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.forgotPasswordLink.Location = new System.Drawing.Point(197, 201);
+            this.forgotPasswordLink.Name = "forgotPasswordLink";
+            this.forgotPasswordLink.Size = new System.Drawing.Size(161, 20);
+            this.forgotPasswordLink.TabIndex = 4;
+            this.forgotPasswordLink.TabStop = true;
+            this.forgotPasswordLink.Text = "Passwort vergessen";
+            this.forgotPasswordLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.forgotPasswordLink_LinkClicked);
             // 
             // usernameTb
             // 
@@ -133,15 +135,26 @@
             this.passwordTb.TabIndex = 6;
             this.passwordTb.UseSystemPasswordChar = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(121, 44);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(254, 29);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Dedsec DNS Manager";
+            // 
             // LoginView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(488, 316);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.passwordTb);
             this.Controls.Add(this.usernameTb);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.forgotPasswordLink);
             this.Controls.Add(this.PasswordLbl);
             this.Controls.Add(this.usernameLbl);
             this.Controls.Add(this.registerBtn);
@@ -165,6 +178,7 @@
         private System.Windows.Forms.Label usernameLbl;
         private System.Windows.Forms.TextBox passwordTb;
         private System.Windows.Forms.TextBox usernameTb;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel forgotPasswordLink;
+        private System.Windows.Forms.Label label1;
     }
 }

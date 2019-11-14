@@ -1,4 +1,5 @@
-﻿using DedSecDns_Client.Core.MVC;
+﻿using DedSecDns_Client.Controllers;
+using DedSecDns_Client.Core.MVC;
 using System.Windows.Forms;
 
 namespace DedSecDns_Client.Views
@@ -23,6 +24,11 @@ namespace DedSecDns_Client.Views
         public LoginView()
         {
             InitializeComponent();
+        }
+
+        private void forgotPasswordLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AppManager.Instance.ShowDialog(new ForgotPasswordController());
         }
 
         private void loginBtn_Click(object sender, System.EventArgs e)
