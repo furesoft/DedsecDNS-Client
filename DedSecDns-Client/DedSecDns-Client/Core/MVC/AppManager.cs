@@ -89,6 +89,16 @@ namespace DedSecDns_Client.Core.MVC
             th.Start();
         }
 
+        public void ShowDialog(Controller controller)
+        {
+            var oldview = _currentView;
+            _currentView = controller.View;
+            controller.View.Form.FormClosing += (s, e) => _currentView = oldview;
+            Thread th = new Thread(openForm);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
+        }
+
         private static AppManager _instance;
         private static bool _started;
 
