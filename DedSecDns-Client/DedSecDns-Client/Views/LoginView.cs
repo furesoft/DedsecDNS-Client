@@ -28,7 +28,10 @@ namespace DedSecDns_Client.Views
 
         private void loginBtn_Click(object sender, System.EventArgs e)
         {
-            AuthService.Authenticate(usernameTb.Text, passwordTb.Text);
+            if (AuthService.Authenticate(usernameTb.Text, passwordTb.Text))
+            {
+                AppManager.Instance.Load<MainViewController>();
+            }
         }
     }
 }
