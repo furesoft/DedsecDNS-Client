@@ -39,6 +39,7 @@
             // 
             // menuPanel
             // 
+            this.menuPanel.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.menuPanel.Controls.Add(this.logoutBtn);
             this.menuPanel.Controls.Add(this.tldManageBtn);
             this.menuPanel.Controls.Add(this.domainMngBtn);
@@ -71,6 +72,7 @@
             this.logoutBtn.TabIndex = 5;
             this.logoutBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
             this.logoutBtn.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
             // 
             // tldManageBtn
             // 
@@ -93,6 +95,7 @@
             this.tldManageBtn.TabIndex = 4;
             this.tldManageBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
             this.tldManageBtn.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.tldManageBtn.Click += new System.EventHandler(this.tldManageBtn_Click);
             // 
             // domainMngBtn
             // 
@@ -114,9 +117,11 @@
             this.domainMngBtn.TabIndex = 3;
             this.domainMngBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
             this.domainMngBtn.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.domainMngBtn.Click += new System.EventHandler(this.domainMngBtn_Click);
             // 
             // contentPanel
             // 
+            this.contentPanel.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.contentPanel.ControlsAsWidgets = false;
             this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentPanel.Location = new System.Drawing.Point(0, 59);
