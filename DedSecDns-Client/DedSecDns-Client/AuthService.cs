@@ -22,6 +22,7 @@ namespace DedSecDns_Client
                 var parsed_token = new JwtSecurityTokenHandler();
                 var token = parsed_token.ReadJwtToken(result.AccessToken);
                 Session.Set("access_token", token);
+                return true;
             }
 
             return false;
