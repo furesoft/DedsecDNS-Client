@@ -9,6 +9,11 @@ namespace DedSecDns_Client.Core
 {
     public static class Session
     {
+        public static void Clear()
+        {
+            _data.Clear();
+        }
+
         public static T Get<T>(string key)
         {
             return (T)_data[key];
