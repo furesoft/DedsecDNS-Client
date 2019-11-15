@@ -27,15 +27,6 @@ namespace DedSecDns_Client
             return false;
         }
 
-        public static bool Register(string username, string password, string email)
-        {
-            return false;
-        }
-
-        public static void ResetPassword(string email)
-        {
-        }
-
         private const string CLIENT_ID = "5ed6BAqXgVVnRzxAXlei5Zlp1pRSEKQq";
         private const string CLIENT_SECRET = "cNaBFXkY1OJRQLoBgbdvJIgR6lE4peOxeK4m-zWgIjQB3puFdXw-g5FrnSkTjDyc";
         private const string DOMAIN = "furesoft.eu.auth0.com";

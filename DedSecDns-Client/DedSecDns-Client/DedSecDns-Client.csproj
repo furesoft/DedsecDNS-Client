@@ -92,7 +92,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AuthService.cs" />
-    <Compile Include="Controllers\ForgotPasswordController.cs" />
     <Compile Include="Controllers\LoginViewController.cs" />
     <Compile Include="Controllers\MainViewController.cs" />
     <Compile Include="Controllers\SplashController.cs" />
@@ -102,12 +101,6 @@
     <Compile Include="Core\Session.cs" />
     <Compile Include="Models\AuthResult.cs" />
     <Compile Include="Models\User.cs" />
-    <Compile Include="Views\ForgotPasswordView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\ForgotPasswordView.Designer.cs">
-      <DependentUpon>ForgotPasswordView.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\LoginView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,9 +121,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Views\ForgotPasswordView.resx">
-      <DependentUpon>ForgotPasswordView.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\LoginView.resx">
       <DependentUpon>LoginView.cs</DependentUpon>
     </EmbeddedResource>

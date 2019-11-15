@@ -31,10 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginView));
             this.formDropShadow1 = new XanderUI.FormDropShadow();
             this.loginBtn = new XanderUI.XUIButton();
-            this.registerBtn = new XanderUI.XUIButton();
             this.usernameLbl = new System.Windows.Forms.Label();
             this.PasswordLbl = new System.Windows.Forms.Label();
-            this.forgotPasswordLink = new System.Windows.Forms.LinkLabel();
             this.usernameTb = new System.Windows.Forms.TextBox();
             this.passwordTb = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -59,34 +57,13 @@
             this.loginBtn.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
             this.loginBtn.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
             this.loginBtn.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.loginBtn.Location = new System.Drawing.Point(276, 243);
+            this.loginBtn.Location = new System.Drawing.Point(249, 205);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(200, 50);
             this.loginBtn.TabIndex = 0;
             this.loginBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
             this.loginBtn.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
-            // 
-            // registerBtn
-            // 
-            this.registerBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(75)))));
-            this.registerBtn.ButtonImage = ((System.Drawing.Image)(resources.GetObject("registerBtn.ButtonImage")));
-            this.registerBtn.ButtonStyle = XanderUI.XUIButton.Style.Material;
-            this.registerBtn.ButtonText = "Registrieren";
-            this.registerBtn.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(80)))));
-            this.registerBtn.ClickTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(130)))), ((int)(((byte)(140)))));
-            this.registerBtn.CornerRadius = 5;
-            this.registerBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.registerBtn.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.registerBtn.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
-            this.registerBtn.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
-            this.registerBtn.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.registerBtn.Location = new System.Drawing.Point(12, 243);
-            this.registerBtn.Name = "registerBtn";
-            this.registerBtn.Size = new System.Drawing.Size(216, 50);
-            this.registerBtn.TabIndex = 1;
-            this.registerBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
-            this.registerBtn.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             // 
             // usernameLbl
             // 
@@ -107,18 +84,6 @@
             this.PasswordLbl.Size = new System.Drawing.Size(92, 25);
             this.PasswordLbl.TabIndex = 3;
             this.PasswordLbl.Text = "Passwort";
-            // 
-            // forgotPasswordLink
-            // 
-            this.forgotPasswordLink.AutoSize = true;
-            this.forgotPasswordLink.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.forgotPasswordLink.Location = new System.Drawing.Point(197, 201);
-            this.forgotPasswordLink.Name = "forgotPasswordLink";
-            this.forgotPasswordLink.Size = new System.Drawing.Size(161, 20);
-            this.forgotPasswordLink.TabIndex = 4;
-            this.forgotPasswordLink.TabStop = true;
-            this.forgotPasswordLink.Text = "Passwort vergessen";
-            this.forgotPasswordLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.forgotPasswordLink_LinkClicked);
             // 
             // usernameTb
             // 
@@ -150,14 +115,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
-            this.ClientSize = new System.Drawing.Size(488, 316);
+            this.ClientSize = new System.Drawing.Size(488, 307);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.passwordTb);
             this.Controls.Add(this.usernameTb);
-            this.Controls.Add(this.forgotPasswordLink);
             this.Controls.Add(this.PasswordLbl);
             this.Controls.Add(this.usernameLbl);
-            this.Controls.Add(this.registerBtn);
             this.Controls.Add(this.loginBtn);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -173,12 +136,10 @@
 
         private XanderUI.FormDropShadow formDropShadow1;
         private XanderUI.XUIButton loginBtn;
-        private XanderUI.XUIButton registerBtn;
         private System.Windows.Forms.Label PasswordLbl;
         private System.Windows.Forms.Label usernameLbl;
         private System.Windows.Forms.TextBox passwordTb;
         private System.Windows.Forms.TextBox usernameTb;
-        private System.Windows.Forms.LinkLabel forgotPasswordLink;
         private System.Windows.Forms.Label label1;
     }
 }
