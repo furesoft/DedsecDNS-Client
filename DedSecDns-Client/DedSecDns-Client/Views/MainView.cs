@@ -24,5 +24,17 @@ namespace DedSecDns_Client.Views
         {
             InitializeComponent();
         }
+
+        private void xuiNavigationBar1_Click(object sender, System.EventArgs e)
+        {
+        }
+
+        private void xuiNavigationBar1_LeftItemClick(object sender, System.EventArgs e)
+        {
+        }
+
+        private void xuiNavigationBar1_RightItemClick(object sender, System.EventArgs e)
+        {
+        }
     }
 }
