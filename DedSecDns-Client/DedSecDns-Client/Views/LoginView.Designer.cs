@@ -99,6 +99,7 @@
             this.passwordTb.Size = new System.Drawing.Size(248, 22);
             this.passwordTb.TabIndex = 6;
             this.passwordTb.UseSystemPasswordChar = true;
+            this.passwordTb.KeyDown += new System.Windows.Forms.KeyEventHandler(this.passwordTb_KeyDown);
             // 
             // label1
             // 
