@@ -27,12 +27,17 @@ namespace DedSecDns_Client.Views
             InitializeComponent();
         }
 
-        private void loginBtn_Click(object sender, System.EventArgs e)
+        private void loginBtn_Click(object sender, EventArgs e)
         {
             if (AuthService.Authenticate(usernameTb.Text, passwordTb.Text))
             {
                 AppManager.Instance.Load<MainViewController>();
             }
+        }
+
+        private void LoginView_Load(object sender, EventArgs e)
+        {
+            usernameTb.Focus();
         }
 
         private void passwordTb_KeyDown(object sender, KeyEventArgs e)
