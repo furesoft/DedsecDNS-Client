@@ -32,6 +32,7 @@ namespace DedSecDns_Client.Views
         {
             contentPanel.Controls.Clear();
             contentPanel.Controls.Add(new ManageDomainsPage());
+            notificationControl1.Message = "Info: ";
         }
 
         private void logoutBtn_Click(object sender, System.EventArgs e)

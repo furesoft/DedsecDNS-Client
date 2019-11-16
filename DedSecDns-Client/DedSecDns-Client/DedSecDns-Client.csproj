@@ -95,6 +95,12 @@
     <Compile Include="Controllers\LoginViewController.cs" />
     <Compile Include="Controllers\MainViewController.cs" />
     <Compile Include="Controllers\SplashController.cs" />
+    <Compile Include="Core\Controls\NotificationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\Controls\NotificationControl.Designer.cs">
+      <DependentUpon>NotificationControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Core\MVC\AppManager.cs" />
     <Compile Include="Core\MVC\Controller.cs" />
     <Compile Include="Core\MVC\IView.cs" />
@@ -133,6 +139,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Core\Controls\NotificationControl.resx">
+      <DependentUpon>NotificationControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pages\ManageDomainsPage.resx">
       <DependentUpon>ManageDomainsPage.cs</DependentUpon>
     </EmbeddedResource>

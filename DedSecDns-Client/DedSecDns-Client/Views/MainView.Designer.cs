@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainView));
             this.menuPanel = new XanderUI.XUIWidgetPanel();
+            this.notificationControl1 = new DedSecDns_Client.Core.Controls.NotificationControl();
             this.logoutBtn = new XanderUI.XUIButton();
             this.tldManageBtn = new XanderUI.XUIButton();
             this.domainMngBtn = new XanderUI.XUIButton();
@@ -40,6 +41,7 @@
             // menuPanel
             // 
             this.menuPanel.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.menuPanel.Controls.Add(this.notificationControl1);
             this.menuPanel.Controls.Add(this.logoutBtn);
             this.menuPanel.Controls.Add(this.tldManageBtn);
             this.menuPanel.Controls.Add(this.domainMngBtn);
@@ -51,6 +53,14 @@
             this.menuPanel.Padding = new System.Windows.Forms.Padding(5);
             this.menuPanel.Size = new System.Drawing.Size(1214, 59);
             this.menuPanel.TabIndex = 3;
+            // 
+            // notificationControl1
+            // 
+            this.notificationControl1.Location = new System.Drawing.Point(467, 5);
+            this.notificationControl1.Name = "notificationControl1";
+            this.notificationControl1.Size = new System.Drawing.Size(354, 46);
+            this.notificationControl1.TabIndex = 6;
+            this.notificationControl1.Visible = false;
             // 
             // logoutBtn
             // 
@@ -154,5 +164,6 @@
         private XanderUI.XUIButton tldManageBtn;
         private XanderUI.XUIButton domainMngBtn;
         private XanderUI.XUIWidgetPanel contentPanel;
+        private Core.Controls.NotificationControl notificationControl1;
     }
 }
