@@ -95,9 +95,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AuthService.cs" />
+    <Compile Include="Commands\UpdateSearchCommand.cs" />
     <Compile Include="Controllers\LoginViewController.cs" />
     <Compile Include="Controllers\MainViewController.cs" />
     <Compile Include="Controllers\SplashController.cs" />
+    <Compile Include="Core\CommandRepository.cs" />
+    <Compile Include="Core\ICommand.cs" />
     <Compile Include="Core\Controls\NotificationControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -113,6 +116,7 @@
     <Compile Include="Core\Controls\WatermarkTextbox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Core\ISearchableCommand.cs" />
     <Compile Include="Core\MVC\AppManager.cs" />
     <Compile Include="Core\MVC\Controller.cs" />
     <Compile Include="Core\MVC\IView.cs" />
@@ -138,6 +142,7 @@
       <DependentUpon>PopupComboBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Core\Session.cs" />
+    <Compile Include="Core\Updater.cs" />
     <Compile Include="Models\AuthResult.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Pages\ManageDomainsPage.cs">
