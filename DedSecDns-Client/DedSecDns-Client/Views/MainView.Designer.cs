@@ -35,6 +35,7 @@
             this.domainMngBtn = new XanderUI.XUIButton();
             this.contentPanel = new XanderUI.XUIWidgetPanel();
             this.xuiObjectAnimator1 = new XanderUI.XUIObjectAnimator();
+            this.searchbarPanel = new System.Windows.Forms.Panel();
             this.welcomePage1 = new DedSecDns_Client.Pages.WelcomePage();
             this.notificationControl1 = new DedSecDns_Client.Core.Controls.NotificationControl();
             this.menuPanel.SuspendLayout();
@@ -44,6 +45,7 @@
             // menuPanel
             // 
             this.menuPanel.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.menuPanel.Controls.Add(this.searchbarPanel);
             this.menuPanel.Controls.Add(this.notificationControl1);
             this.menuPanel.Controls.Add(this.logoutBtn);
             this.menuPanel.Controls.Add(this.tldManageBtn);
@@ -137,6 +139,13 @@
             this.contentPanel.Size = new System.Drawing.Size(1214, 533);
             this.contentPanel.TabIndex = 4;
             // 
+            // searchbarPanel
+            // 
+            this.searchbarPanel.Location = new System.Drawing.Point(862, 13);
+            this.searchbarPanel.Name = "searchbarPanel";
+            this.searchbarPanel.Size = new System.Drawing.Size(141, 38);
+            this.searchbarPanel.TabIndex = 7;
+            // 
             // welcomePage1
             // 
             this.welcomePage1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -182,5 +191,6 @@
         private Core.Controls.NotificationControl notificationControl1;
         private XanderUI.XUIObjectAnimator xuiObjectAnimator1;
         private Pages.WelcomePage welcomePage1;
+        private System.Windows.Forms.Panel searchbarPanel;
     }
 }

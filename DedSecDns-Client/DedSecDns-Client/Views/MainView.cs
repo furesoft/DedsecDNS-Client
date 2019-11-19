@@ -50,12 +50,12 @@ namespace DedSecDns_Client.Views
             page.Dock = DockStyle.Fill;
             contentPanel.Controls.Add(page);
 
-            this.xuiObjectAnimator1.StandardAnimate(page, XanderUI.XUIObjectAnimator.StandardAnimation.SlideUp, 1000);
+            this.xuiObjectAnimator1.StandardAnimate(page, XanderUI.XUIObjectAnimator.StandardAnimation.SlideLeft, 1500);
         }
 
         private void ShowSearchBar()
         {
-            new Popup(new Button()).Show(new SearchBarControl());
+            new Popup(new SearchBarControl()).Show(searchbarPanel);
         }
 
         private void tldManageBtn_Click(object sender, System.EventArgs e)
