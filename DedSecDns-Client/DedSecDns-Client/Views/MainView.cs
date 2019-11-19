@@ -2,6 +2,7 @@
 using DedSecDns_Client.Core;
 using DedSecDns_Client.Core.MVC;
 using DedSecDns_Client.Pages;
+using System;
 using System.Windows.Forms;
 
 namespace DedSecDns_Client.Views
@@ -50,21 +51,22 @@ namespace DedSecDns_Client.Views
             this.xuiObjectAnimator1.StandardAnimate(page, XanderUI.XUIObjectAnimator.StandardAnimation.SlideUp, 1000);
         }
 
+        private void ShowSearchBar()
+        {
+            throw new NotImplementedException();
+        }
+
         private void tldManageBtn_Click(object sender, System.EventArgs e)
         {
             Navigate(new ManageTldPage());
         }
 
-        private void xuiNavigationBar1_Click(object sender, System.EventArgs e)
+        private void welcomePage1_KeyDown(object sender, KeyEventArgs e)
         {
-        }
-
-        private void xuiNavigationBar1_LeftItemClick(object sender, System.EventArgs e)
-        {
-        }
-
-        private void xuiNavigationBar1_RightItemClick(object sender, System.EventArgs e)
-        {
+            if (e.Control && e.Alt && e.KeyCode == Keys.S)
+            {
+                ShowSearchBar();
+            }
         }
     }
 }
