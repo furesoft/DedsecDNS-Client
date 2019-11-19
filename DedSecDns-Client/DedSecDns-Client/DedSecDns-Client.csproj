@@ -107,6 +107,9 @@
     <Compile Include="Core\Controls\SearchBarControl.Designer.cs">
       <DependentUpon>SearchBarControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Core\Controls\WatermarkTextbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Core\MVC\AppManager.cs" />
     <Compile Include="Core\MVC\Controller.cs" />
     <Compile Include="Core\MVC\IView.cs" />

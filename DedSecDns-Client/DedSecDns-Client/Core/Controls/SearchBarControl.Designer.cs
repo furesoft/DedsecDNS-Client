@@ -29,17 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchBarControl));
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.waterMarkTextBox1 = new DedSecDns_Client.Core.Controls.WaterMarkTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(0, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(214, 22);
-            this.textBox1.TabIndex = 0;
             // 
             // pictureBox1
             // 
@@ -51,15 +44,27 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // waterMarkTextBox1
+            // 
+            this.waterMarkTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.waterMarkTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
+            this.waterMarkTextBox1.Location = new System.Drawing.Point(6, 9);
+            this.waterMarkTextBox1.Name = "waterMarkTextBox1";
+            this.waterMarkTextBox1.Size = new System.Drawing.Size(211, 15);
+            this.waterMarkTextBox1.TabIndex = 2;
+            this.waterMarkTextBox1.WaterMarkColor = System.Drawing.Color.Gray;
+            this.waterMarkTextBox1.WaterMarkText = "Aktion suchen";
+            // 
             // SearchBarControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.waterMarkTextBox1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox1);
             this.Name = "SearchBarControl";
             this.Size = new System.Drawing.Size(244, 32);
+            this.Tag = "Aktion suchen";
             this.Load += new System.EventHandler(this.SearchBarControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -68,8 +73,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private WaterMarkTextBox waterMarkTextBox1;
     }
 }

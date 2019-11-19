@@ -53,6 +53,11 @@ namespace DedSecDns_Client.Views
             this.xuiObjectAnimator1.StandardAnimate(page, XanderUI.XUIObjectAnimator.StandardAnimation.SlideLeft, 1500);
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            ShowSearchBar();
+        }
+
         private void ShowSearchBar()
         {
             new Popup(new SearchBarControl()).Show(searchbarPanel);

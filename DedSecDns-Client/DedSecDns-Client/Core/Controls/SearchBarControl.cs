@@ -19,7 +19,7 @@ namespace DedSecDns_Client.Core.Controls
 
         private void SearchBarControl_Load(object sender, EventArgs e)
         {
-            textBox1.Focus();
+            waterMarkTextBox1.Focus();
         }
     }
 }

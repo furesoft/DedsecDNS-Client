@@ -38,8 +38,11 @@
             this.searchbarPanel = new System.Windows.Forms.Panel();
             this.welcomePage1 = new DedSecDns_Client.Pages.WelcomePage();
             this.notificationControl1 = new DedSecDns_Client.Core.Controls.NotificationControl();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuPanel.SuspendLayout();
             this.contentPanel.SuspendLayout();
+            this.searchbarPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuPanel
@@ -141,6 +144,7 @@
             // 
             // searchbarPanel
             // 
+            this.searchbarPanel.Controls.Add(this.pictureBox1);
             this.searchbarPanel.Location = new System.Drawing.Point(862, 13);
             this.searchbarPanel.Name = "searchbarPanel";
             this.searchbarPanel.Size = new System.Drawing.Size(141, 38);
@@ -164,6 +168,18 @@
             this.notificationControl1.TabIndex = 6;
             this.notificationControl1.Visible = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(106, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(35, 38);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -177,6 +193,8 @@
             this.Text = "DedSecDns -  Manager";
             this.menuPanel.ResumeLayout(false);
             this.contentPanel.ResumeLayout(false);
+            this.searchbarPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -192,5 +210,6 @@
         private XanderUI.XUIObjectAnimator xuiObjectAnimator1;
         private Pages.WelcomePage welcomePage1;
         private System.Windows.Forms.Panel searchbarPanel;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
