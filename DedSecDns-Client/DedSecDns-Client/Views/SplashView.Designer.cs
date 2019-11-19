@@ -45,7 +45,7 @@
             this.xuiSplashScreen1.SecondsDisplayed = 3000;
             this.xuiSplashScreen1.ShowProgressBar = true;
             this.xuiSplashScreen1.SplashSize = new System.Drawing.Size(450, 280);
-            this.xuiSplashScreen1.TopText = "DedsecDns";
+            this.xuiSplashScreen1.TopText = "DNS Manager";
             this.xuiSplashScreen1.TopTextColor = System.Drawing.Color.White;
             this.xuiSplashScreen1.TopTextSize = 36;
             this.xuiSplashScreen1.UnloadedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
