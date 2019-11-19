@@ -1,6 +1,8 @@
 ﻿using DedSecDns_Client.Controllers;
 using DedSecDns_Client.Core;
+using DedSecDns_Client.Core.Controls;
 using DedSecDns_Client.Core.MVC;
+using DedSecDns_Client.Core.Popup;
 using DedSecDns_Client.Pages;
 using System;
 using System.Windows.Forms;
@@ -53,7 +55,7 @@ namespace DedSecDns_Client.Views
 
         private void ShowSearchBar()
         {
-            throw new NotImplementedException();
+            new Popup(new Button()).Show(new SearchBarControl());
         }
 
         private void tldManageBtn_Click(object sender, System.EventArgs e)

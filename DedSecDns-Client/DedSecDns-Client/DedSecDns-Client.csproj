@@ -101,9 +101,36 @@
     <Compile Include="Core\Controls\NotificationControl.Designer.cs">
       <DependentUpon>NotificationControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Core\Controls\SearchBarControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\Controls\SearchBarControl.Designer.cs">
+      <DependentUpon>SearchBarControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Core\MVC\AppManager.cs" />
     <Compile Include="Core\MVC\Controller.cs" />
     <Compile Include="Core\MVC\IView.cs" />
+    <Compile Include="Core\Popup\ComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\Popup\ComboBox.designer.cs">
+      <DependentUpon>ComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Popup\GripBounds.cs" />
+    <Compile Include="Core\Popup\NativeMethods.cs" />
+    <Compile Include="Core\Popup\Popup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\Popup\Popup.Designer.cs">
+      <DependentUpon>Popup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Popup\PopupAnimations.cs" />
+    <Compile Include="Core\Popup\PopupComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\Popup\PopupComboBox.designer.cs">
+      <DependentUpon>PopupComboBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Core\Session.cs" />
     <Compile Include="Models\AuthResult.cs" />
     <Compile Include="Models\User.cs" />
@@ -147,6 +174,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Core\Controls\NotificationControl.resx">
       <DependentUpon>NotificationControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Controls\SearchBarControl.resx">
+      <DependentUpon>SearchBarControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\ManageDomainsPage.resx">
       <DependentUpon>ManageDomainsPage.cs</DependentUpon>
