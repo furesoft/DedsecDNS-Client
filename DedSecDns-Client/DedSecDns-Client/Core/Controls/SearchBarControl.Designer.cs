@@ -57,7 +57,6 @@
             this.waterMarkTextBox1.TabIndex = 2;
             this.waterMarkTextBox1.WaterMarkColor = System.Drawing.Color.Gray;
             this.waterMarkTextBox1.WaterMarkText = "Aktion suchen";
-            this.waterMarkTextBox1.TextChanged += new System.EventHandler(this.waterMarkTextBox1_TextChanged);
             this.waterMarkTextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.waterMarkTextBox1_KeyDown);
             // 
             // SearchBarControl

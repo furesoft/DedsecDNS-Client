@@ -18,11 +18,16 @@ namespace DedSecDns_Client.Core.Controls
             InitializeComponent();
         }
 
-        private void OpenSearchResults()
+        private void SearchBarControl_Load(object sender, EventArgs e)
         {
+            waterMarkTextBox1.Focus();
+
             var trie = new Trie<string>();
-            trie.Add("domain", "Domain hinzufügen");
-            trie.Add("update", "Update suchen");
+
+            foreach (var item in CommandRepository.GetAllNames())
+            {
+                trie.Add(item.Key, item.Value);
+            }
 
             var result = trie.Retrieve(waterMarkTextBox1.Text);
             var items = new AutoCompleteStringCollection();
@@ -35,27 +40,17 @@ namespace DedSecDns_Client.Core.Controls
             waterMarkTextBox1.AutoCompleteCustomSource = items;
         }
 
-        private void SearchBarControl_Load(object sender, EventArgs e)
-        {
-            waterMarkTextBox1.Focus();
-        }
-
         private void searchBtn_Click(object sender, EventArgs e)
         {
-            OpenSearchResults();
+            //ToDo: invoke command
         }
 
         private void waterMarkTextBox1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                OpenSearchResults();
+                //ToDo: invoke
             }
-        }
-
-        private void waterMarkTextBox1_TextChanged(object sender, EventArgs e)
-        {
-            OpenSearchResults();
         }
     }
 }

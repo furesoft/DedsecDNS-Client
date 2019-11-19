@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 
 namespace DedSecDns_Client.Core
@@ -15,11 +16,23 @@ namespace DedSecDns_Client.Core
         {
             foreach (var type in Assembly.GetExecutingAssembly().GetTypes())
             {
-                if (type.IsAssignableFrom(typeof(ISearchableCommand)))
+                if (type.GetInterfaces().Contains(typeof(ISearchableCommand)))
                 {
                     Add((ISearchableCommand)Activator.CreateInstance(type));
                 }
             }
+        }
+
+        public static Dictionary<string, string> GetAllNames()
+        {
+            var result = new Dictionary<string, string>();
+
+            foreach (var item in _commands)
+            {
+                result.Add(item.Key, item.Title);
+            }
+
+            return result;
         }
 
         private static List<ISearchableCommand> _commands = new List<ISearchableCommand>();

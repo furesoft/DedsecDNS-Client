@@ -44,6 +44,11 @@ namespace DedSecDns_Client.Views
             AppManager.Instance.Load<LoginViewController>();
         }
 
+        private void MainView_Load(object sender, EventArgs e)
+        {
+            CommandRepository.Collect();
+        }
+
         private void Navigate(UserControl page)
         {
             contentPanel.Controls.Clear();
