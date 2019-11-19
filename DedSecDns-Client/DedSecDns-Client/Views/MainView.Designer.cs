@@ -30,12 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainView));
             this.menuPanel = new XanderUI.XUIWidgetPanel();
-            this.notificationControl1 = new DedSecDns_Client.Core.Controls.NotificationControl();
             this.logoutBtn = new XanderUI.XUIButton();
             this.tldManageBtn = new XanderUI.XUIButton();
             this.domainMngBtn = new XanderUI.XUIButton();
             this.contentPanel = new XanderUI.XUIWidgetPanel();
+            this.xuiObjectAnimator1 = new XanderUI.XUIObjectAnimator();
+            this.notificationControl1 = new DedSecDns_Client.Core.Controls.NotificationControl();
+            this.welcomePage1 = new DedSecDns_Client.Pages.WelcomePage();
             this.menuPanel.SuspendLayout();
+            this.contentPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuPanel
@@ -53,14 +56,6 @@
             this.menuPanel.Padding = new System.Windows.Forms.Padding(5);
             this.menuPanel.Size = new System.Drawing.Size(1214, 59);
             this.menuPanel.TabIndex = 3;
-            // 
-            // notificationControl1
-            // 
-            this.notificationControl1.Location = new System.Drawing.Point(467, 5);
-            this.notificationControl1.Name = "notificationControl1";
-            this.notificationControl1.Size = new System.Drawing.Size(354, 46);
-            this.notificationControl1.TabIndex = 6;
-            this.notificationControl1.Visible = false;
             // 
             // logoutBtn
             // 
@@ -132,6 +127,7 @@
             // contentPanel
             // 
             this.contentPanel.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.contentPanel.Controls.Add(this.welcomePage1);
             this.contentPanel.ControlsAsWidgets = false;
             this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentPanel.Location = new System.Drawing.Point(0, 59);
@@ -140,6 +136,23 @@
             this.contentPanel.Padding = new System.Windows.Forms.Padding(5);
             this.contentPanel.Size = new System.Drawing.Size(1214, 533);
             this.contentPanel.TabIndex = 4;
+            // 
+            // notificationControl1
+            // 
+            this.notificationControl1.Location = new System.Drawing.Point(467, 5);
+            this.notificationControl1.Message = "";
+            this.notificationControl1.Name = "notificationControl1";
+            this.notificationControl1.Size = new System.Drawing.Size(354, 46);
+            this.notificationControl1.TabIndex = 6;
+            this.notificationControl1.Visible = false;
+            // 
+            // welcomePage1
+            // 
+            this.welcomePage1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.welcomePage1.Location = new System.Drawing.Point(5, 5);
+            this.welcomePage1.Name = "welcomePage1";
+            this.welcomePage1.Size = new System.Drawing.Size(1204, 523);
+            this.welcomePage1.TabIndex = 0;
             // 
             // MainView
             // 
@@ -153,6 +166,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DedSecDns -  Manager";
             this.menuPanel.ResumeLayout(false);
+            this.contentPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -165,5 +179,7 @@
         private XanderUI.XUIButton domainMngBtn;
         private XanderUI.XUIWidgetPanel contentPanel;
         private Core.Controls.NotificationControl notificationControl1;
+        private XanderUI.XUIObjectAnimator xuiObjectAnimator1;
+        private Pages.WelcomePage welcomePage1;
     }
 }

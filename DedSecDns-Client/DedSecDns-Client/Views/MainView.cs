@@ -30,8 +30,8 @@ namespace DedSecDns_Client.Views
 
         private void domainMngBtn_Click(object sender, System.EventArgs e)
         {
-            contentPanel.Controls.Clear();
-            contentPanel.Controls.Add(new ManageDomainsPage());
+            Navigate(new ManageDomainsPage());
+
             notificationControl1.Message = "Info: ";
         }
 
@@ -41,10 +41,18 @@ namespace DedSecDns_Client.Views
             AppManager.Instance.Load<LoginViewController>();
         }
 
-        private void tldManageBtn_Click(object sender, System.EventArgs e)
+        private void Navigate(UserControl page)
         {
             contentPanel.Controls.Clear();
-            contentPanel.Controls.Add(new ManageTldPage());
+            page.Dock = DockStyle.Fill;
+            contentPanel.Controls.Add(page);
+
+            this.xuiObjectAnimator1.StandardAnimate(page, XanderUI.XUIObjectAnimator.StandardAnimation.SlideUp, 1000);
+        }
+
+        private void tldManageBtn_Click(object sender, System.EventArgs e)
+        {
+            Navigate(new ManageTldPage());
         }
 
         private void xuiNavigationBar1_Click(object sender, System.EventArgs e)
