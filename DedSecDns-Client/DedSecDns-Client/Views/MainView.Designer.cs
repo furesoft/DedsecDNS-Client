@@ -35,8 +35,8 @@
             this.domainMngBtn = new XanderUI.XUIButton();
             this.contentPanel = new XanderUI.XUIWidgetPanel();
             this.xuiObjectAnimator1 = new XanderUI.XUIObjectAnimator();
-            this.notificationControl1 = new DedSecDns_Client.Core.Controls.NotificationControl();
             this.welcomePage1 = new DedSecDns_Client.Pages.WelcomePage();
+            this.notificationControl1 = new DedSecDns_Client.Core.Controls.NotificationControl();
             this.menuPanel.SuspendLayout();
             this.contentPanel.SuspendLayout();
             this.SuspendLayout();
@@ -137,6 +137,15 @@
             this.contentPanel.Size = new System.Drawing.Size(1214, 533);
             this.contentPanel.TabIndex = 4;
             // 
+            // welcomePage1
+            // 
+            this.welcomePage1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.welcomePage1.Location = new System.Drawing.Point(5, 5);
+            this.welcomePage1.Name = "welcomePage1";
+            this.welcomePage1.Size = new System.Drawing.Size(1204, 523);
+            this.welcomePage1.TabIndex = 0;
+            this.welcomePage1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.welcomePage1_KeyDown);
+            // 
             // notificationControl1
             // 
             this.notificationControl1.Location = new System.Drawing.Point(467, 5);
@@ -145,14 +154,6 @@
             this.notificationControl1.Size = new System.Drawing.Size(354, 46);
             this.notificationControl1.TabIndex = 6;
             this.notificationControl1.Visible = false;
-            // 
-            // welcomePage1
-            // 
-            this.welcomePage1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.welcomePage1.Location = new System.Drawing.Point(5, 5);
-            this.welcomePage1.Name = "welcomePage1";
-            this.welcomePage1.Size = new System.Drawing.Size(1204, 523);
-            this.welcomePage1.TabIndex = 0;
             // 
             // MainView
             // 
