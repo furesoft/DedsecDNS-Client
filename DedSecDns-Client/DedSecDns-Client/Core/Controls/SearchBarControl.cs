@@ -42,14 +42,14 @@ namespace DedSecDns_Client.Core.Controls
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
-            //ToDo: invoke command
+            CommandRepository.InvokeCommand(waterMarkTextBox1.Text);
         }
 
         private void waterMarkTextBox1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                //ToDo: invoke
+                CommandRepository.InvokeCommand(waterMarkTextBox1.Text);
             }
         }
     }

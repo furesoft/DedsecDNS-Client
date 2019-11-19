@@ -35,6 +35,17 @@ namespace DedSecDns_Client.Core
             return result;
         }
 
+        public static void InvokeCommand(string title)
+        {
+            foreach (var cmd in _commands)
+            {
+                if (cmd.Title == title)
+                {
+                    cmd.Invoke();
+                }
+            }
+        }
+
         private static List<ISearchableCommand> _commands = new List<ISearchableCommand>();
     }
 }
