@@ -142,7 +142,22 @@
       <DependentUpon>PopupComboBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Core\Session.cs" />
+    <Compile Include="Core\Controls\Line.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\Styling\Converters\ColorConverter.cs" />
+    <Compile Include="Core\Styling\Converters\FontConverter.cs" />
+    <Compile Include="Core\Styling\Converters\ImageConverter.cs" />
+    <Compile Include="Core\Styling\Parser\CssParser.cs" />
+    <Compile Include="Core\Styling\Parser\CssParserDeclaration.cs" />
+    <Compile Include="Core\Styling\Parser\CssParserRule.cs" />
+    <Compile Include="Core\Styling\Function.cs" />
+    <Compile Include="Core\Styling\HSLColor.cs" />
+    <Compile Include="Core\Styling\IConverter.cs" />
+    <Compile Include="Core\Styling\StyleChanger.cs" />
+    <Compile Include="Core\Styling\Parser\TextParser.cs" />
     <Compile Include="Core\Updater.cs" />
+    <Compile Include="DnsService.cs" />
     <Compile Include="Models\AuthResult.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Pages\ManageDomainsPage.cs">
@@ -231,7 +246,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ColorScheme.txt" />
     <Content Include="FodyWeavers.xml" />
+    <Content Include="ToDo.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
