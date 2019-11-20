@@ -11,11 +11,6 @@ namespace DedSecDns_Client.Core.Styling.Parser
     /// </summary>
     public class CssParser : TextParser
     {
-        public CssParser(string media = null)
-        {
-            _media = media;
-        }
-
         /// <summary>
         /// 	Moves to the next occurrence of the specified character, skipping
         /// 	over quoted Contents.
@@ -32,84 +27,38 @@ namespace DedSecDns_Client.Core.Styling.Parser
             }
         }
 
-        public IEnumerable<CssParserRule> ParseAll(string css)
+        public IEnumerable<CssParserDeclaration> ParseAll(string css)
         {
             int start;
 
             Reset(css);
             StripAllComments();
 
-            var rules = new List<CssParserRule>();
+            var rules = new List<CssParserDeclaration>();
 
             while (!EndOfText)
             {
                 MovePastWhitespace();
-
-                if (Peek() == '@')
-                {
-                    // Process "at-rule"
-                    string atRule = ExtractSkippedText(MoveToWhiteSpace).ToLower();
-                    if (atRule == "@media")
-                    {
-                        start = Position;
-                        MoveTo('{');
-                        string newMedia = Extract(start, Position).Trim();
-
-                        // Parse contents of media block
-                        string innerBlock = ExtractSkippedText(() => SkipOverBlock('{', '}'));
-
-                        // Trim curly braces
-                        if (innerBlock.StartsWith("{"))
-                            innerBlock = innerBlock.Remove(0, 1);
-                        if (innerBlock.EndsWith("}"))
-                            innerBlock = innerBlock.Substring(0, innerBlock.Length - 1);
-
-                        // Parse CSS in block
-                        var parser = new CssParser(newMedia);
-                        rules.AddRange(parser.ParseAll(innerBlock));
-
-                        continue;
-                    }
-                    else throw new NotSupportedException(String.Format("{0} rule is unsupported", atRule));
-                }
-
-                // Find start of next declaration block
-                start = Position;
-                MoveTo('{');
-                if (EndOfText) // Done if no more
-                    break;
-
-                // Parse selectors
-                string selectors = Extract(start, Position);
-                var rule = new CssParserRule(_media)
-                {
-                    Selectors = from s in selectors.Split(',')
-                                let s2 = s.Trim()
-                                where s2.Length > 0
-                                select s2
-                };
 
                 // Parse declarations
                 MoveAhead();
                 start = Position;
                 MoveTo('}');
                 string properties = Extract(start, Position);
-                rule.Declarations = from s in properties.Split(';')
-                                    let s2 = s.Trim()
-                                    where s2.Length > 0
-                                    let x = s2.IndexOf(':')
-                                    select new CssParserDeclaration
-                                    {
-                                        Property = s2.Substring(0, (x < 0) ? 0 : x).TrimEnd(),
-                                        Value = s2.Substring((x < 0) ? 0 : x + 1).TrimStart()
-                                    };
+                rules.AddRange(from s in properties.Split(';')
+                               let s2 = s.Trim()
+                               where s2.Length > 0
+                               let x = s2.IndexOf(':')
+                               select new CssParserDeclaration
+                               {
+                                   Property = s2.Substring(0, (x < 0) ? 0 : x).TrimEnd(),
+                                   Value = s2.Substring((x < 0) ? 0 : x + 1).TrimStart()
+                               });
 
                 // Skip over closing curly brace
                 MoveAhead();
-
-                // Add rule to results
-                rules.Add(rule);
             }
+
             // Return rules to caller
             return rules;
         }

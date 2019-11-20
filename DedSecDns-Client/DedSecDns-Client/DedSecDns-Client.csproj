@@ -99,6 +99,7 @@
     <Compile Include="Controllers\LoginViewController.cs" />
     <Compile Include="Controllers\MainViewController.cs" />
     <Compile Include="Controllers\SplashController.cs" />
+    <Compile Include="Core\ColorScheme.cs" />
     <Compile Include="Core\CommandRepository.cs" />
     <Compile Include="Core\ICommand.cs" />
     <Compile Include="Core\Controls\NotificationControl.cs">
@@ -145,16 +146,13 @@
     <Compile Include="Core\Controls\Line.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Core\Styling\Converters\ColorConverter.cs" />
-    <Compile Include="Core\Styling\Converters\FontConverter.cs" />
-    <Compile Include="Core\Styling\Converters\ImageConverter.cs" />
+    <Compile Include="Core\Styling\ColorConverter.cs" />
     <Compile Include="Core\Styling\Parser\CssParser.cs" />
     <Compile Include="Core\Styling\Parser\CssParserDeclaration.cs" />
     <Compile Include="Core\Styling\Parser\CssParserRule.cs" />
     <Compile Include="Core\Styling\Function.cs" />
     <Compile Include="Core\Styling\HSLColor.cs" />
     <Compile Include="Core\Styling\IConverter.cs" />
-    <Compile Include="Core\Styling\StyleChanger.cs" />
     <Compile Include="Core\Styling\Parser\TextParser.cs" />
     <Compile Include="Core\Updater.cs" />
     <Compile Include="DnsService.cs" />
@@ -230,7 +228,9 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="default.colorscheme" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

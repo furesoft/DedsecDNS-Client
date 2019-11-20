@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace DedSecDns_Client.Core.Styling.Converters
+namespace DedSecDns_Client.Core.Styling
 {
     public class ColorConverter : IConverter<Color>
     {
