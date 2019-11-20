@@ -28,52 +28,92 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.xuiBanner1 = new XanderUI.XUIBanner();
-            this.xuiCard1 = new XanderUI.XUICard();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageDomainsPage));
+            this.label1 = new System.Windows.Forms.Label();
+            this.addDomainBtn = new XanderUI.XUIButton();
+            this.removeDomainBtn = new XanderUI.XUIButton();
+            this.domainNamesCb = new DedSecDns_Client.Core.Popup.ComboBox();
             this.SuspendLayout();
             // 
-            // xuiBanner1
+            // label1
             // 
-            this.xuiBanner1.BackColor = System.Drawing.Color.Transparent;
-            this.xuiBanner1.BannerColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
-            this.xuiBanner1.BorderColor = System.Drawing.Color.White;
-            this.xuiBanner1.ForeColor = System.Drawing.Color.White;
-            this.xuiBanner1.Location = new System.Drawing.Point(531, 104);
-            this.xuiBanner1.Name = "xuiBanner1";
-            this.xuiBanner1.Size = new System.Drawing.Size(100, 20);
-            this.xuiBanner1.TabIndex = 0;
-            this.xuiBanner1.Text = "xuiBanner1";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(4, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 17);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Domains";
             // 
-            // xuiCard1
+            // addDomainBtn
             // 
-            this.xuiCard1.BackColor = System.Drawing.Color.Transparent;
-            this.xuiCard1.Color1 = System.Drawing.Color.DodgerBlue;
-            this.xuiCard1.Color2 = System.Drawing.Color.LimeGreen;
-            this.xuiCard1.ForeColor = System.Drawing.Color.White;
-            this.xuiCard1.Location = new System.Drawing.Point(95, 90);
-            this.xuiCard1.Name = "xuiCard1";
-            this.xuiCard1.Size = new System.Drawing.Size(320, 170);
-            this.xuiCard1.TabIndex = 1;
-            this.xuiCard1.Text = "xuiCard1";
-            this.xuiCard1.Text1 = "Savings Card";
-            this.xuiCard1.Text2 = "1234 5678 9101 1121";
-            this.xuiCard1.Text3 = "Exp: 01/02 - 03/04";
+            this.addDomainBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(75)))));
+            this.addDomainBtn.ButtonImage = ((System.Drawing.Image)(resources.GetObject("addDomainBtn.ButtonImage")));
+            this.addDomainBtn.ButtonStyle = XanderUI.XUIButton.Style.Material;
+            this.addDomainBtn.ButtonText = "";
+            this.addDomainBtn.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(80)))));
+            this.addDomainBtn.ClickTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(130)))), ((int)(((byte)(140)))));
+            this.addDomainBtn.CornerRadius = 5;
+            this.addDomainBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.addDomainBtn.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.addDomainBtn.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
+            this.addDomainBtn.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
+            this.addDomainBtn.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.addDomainBtn.Location = new System.Drawing.Point(322, 3);
+            this.addDomainBtn.Name = "addDomainBtn";
+            this.addDomainBtn.Size = new System.Drawing.Size(54, 50);
+            this.addDomainBtn.TabIndex = 2;
+            this.addDomainBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
+            this.addDomainBtn.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            // 
+            // removeDomainBtn
+            // 
+            this.removeDomainBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(75)))));
+            this.removeDomainBtn.ButtonImage = ((System.Drawing.Image)(resources.GetObject("removeDomainBtn.ButtonImage")));
+            this.removeDomainBtn.ButtonStyle = XanderUI.XUIButton.Style.Material;
+            this.removeDomainBtn.ButtonText = "";
+            this.removeDomainBtn.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(80)))));
+            this.removeDomainBtn.ClickTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(130)))), ((int)(((byte)(140)))));
+            this.removeDomainBtn.CornerRadius = 5;
+            this.removeDomainBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.removeDomainBtn.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.removeDomainBtn.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
+            this.removeDomainBtn.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
+            this.removeDomainBtn.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.removeDomainBtn.Location = new System.Drawing.Point(392, 3);
+            this.removeDomainBtn.Name = "removeDomainBtn";
+            this.removeDomainBtn.Size = new System.Drawing.Size(54, 50);
+            this.removeDomainBtn.TabIndex = 3;
+            this.removeDomainBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
+            this.removeDomainBtn.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            // 
+            // domainNamesCb
+            // 
+            this.domainNamesCb.FormattingEnabled = true;
+            this.domainNamesCb.Location = new System.Drawing.Point(73, 12);
+            this.domainNamesCb.Name = "domainNamesCb";
+            this.domainNamesCb.Size = new System.Drawing.Size(243, 24);
+            this.domainNamesCb.TabIndex = 0;
             // 
             // ManageDomainsPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.xuiCard1);
-            this.Controls.Add(this.xuiBanner1);
+            this.Controls.Add(this.removeDomainBtn);
+            this.Controls.Add(this.addDomainBtn);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.domainNamesCb);
             this.Name = "ManageDomainsPage";
             this.Size = new System.Drawing.Size(908, 499);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private XanderUI.XUIBanner xuiBanner1;
-        private XanderUI.XUICard xuiCard1;
+        private Core.Popup.ComboBox domainNamesCb;
+        private System.Windows.Forms.Label label1;
+        private XanderUI.XUIButton addDomainBtn;
+        private XanderUI.XUIButton removeDomainBtn;
     }
 }
