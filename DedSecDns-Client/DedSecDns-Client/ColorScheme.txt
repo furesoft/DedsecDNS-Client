@@ -1,0 +1,5 @@
+﻿Background: 82, 82, 82
+Element Background: 65, 65, 65
+Other Dark color: 49, 49, 49
+
+https://colorhunt.co/palette/149559
