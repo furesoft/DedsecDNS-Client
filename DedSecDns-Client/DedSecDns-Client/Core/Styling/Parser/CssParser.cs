@@ -162,8 +162,6 @@ namespace DedSecDns_Client.Core.Styling.Parser
             Reset(sb.ToString());
         }
 
-        private readonly string _media;
-
         /// <summary>
         /// 	Moves to the next whitespace character.
         /// </summary>

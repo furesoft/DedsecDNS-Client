@@ -32,13 +32,13 @@
             this.menuPanel = new XanderUI.XUIWidgetPanel();
             this.searchbarPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.notificationControl1 = new DedSecDns_Client.Core.Controls.NotificationControl();
             this.logoutBtn = new XanderUI.XUIButton();
             this.tldManageBtn = new XanderUI.XUIButton();
             this.domainMngBtn = new XanderUI.XUIButton();
             this.contentPanel = new XanderUI.XUIWidgetPanel();
-            this.welcomePage1 = new DedSecDns_Client.Pages.WelcomePage();
             this.xuiObjectAnimator1 = new XanderUI.XUIObjectAnimator();
+            this.welcomePage1 = new DedSecDns_Client.Pages.WelcomePage();
+            this.notificationControl1 = new DedSecDns_Client.Core.Controls.NotificationControl();
             this.menuPanel.SuspendLayout();
             this.searchbarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -81,15 +81,6 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // notificationControl1
-            // 
-            this.notificationControl1.Location = new System.Drawing.Point(467, 5);
-            this.notificationControl1.Message = "";
-            this.notificationControl1.Name = "notificationControl1";
-            this.notificationControl1.Size = new System.Drawing.Size(354, 46);
-            this.notificationControl1.TabIndex = 6;
-            this.notificationControl1.Visible = false;
             // 
             // logoutBtn
             // 
@@ -180,6 +171,15 @@
             this.welcomePage1.TabIndex = 0;
             this.welcomePage1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.welcomePage1_KeyDown);
             // 
+            // notificationControl1
+            // 
+            this.notificationControl1.Location = new System.Drawing.Point(467, 5);
+            this.notificationControl1.Message = "";
+            this.notificationControl1.Name = "notificationControl1";
+            this.notificationControl1.Size = new System.Drawing.Size(354, 46);
+            this.notificationControl1.TabIndex = 6;
+            this.notificationControl1.Visible = false;
+            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -187,10 +187,11 @@
             this.ClientSize = new System.Drawing.Size(1214, 592);
             this.Controls.Add(this.contentPanel);
             this.Controls.Add(this.menuPanel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainView";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Mr. The Green B -  DNS Manager";
+            this.Text = "Projekt TheGreenB -  DNS Manager";
             this.Load += new System.EventHandler(this.MainView_Load);
             this.menuPanel.ResumeLayout(false);
             this.searchbarPanel.ResumeLayout(false);

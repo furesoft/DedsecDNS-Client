@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SplashView));
             this.xuiSplashScreen1 = new XanderUI.XUISplashScreen();
             this.SuspendLayout();
             // 
@@ -35,7 +36,7 @@
             // 
             this.xuiSplashScreen1.AllowDragging = true;
             this.xuiSplashScreen1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.xuiSplashScreen1.BottomText = "";
+            this.xuiSplashScreen1.BottomText = "DNS Manager";
             this.xuiSplashScreen1.BottomTextColor = System.Drawing.Color.White;
             this.xuiSplashScreen1.BottomTextSize = 16;
             this.xuiSplashScreen1.EllipseCornerRadius = 15;
@@ -45,7 +46,7 @@
             this.xuiSplashScreen1.SecondsDisplayed = 3000;
             this.xuiSplashScreen1.ShowProgressBar = true;
             this.xuiSplashScreen1.SplashSize = new System.Drawing.Size(450, 280);
-            this.xuiSplashScreen1.TopText = "DNS Manager";
+            this.xuiSplashScreen1.TopText = "Projekt TheGreenB";
             this.xuiSplashScreen1.TopTextColor = System.Drawing.Color.White;
             this.xuiSplashScreen1.TopTextSize = 36;
             this.xuiSplashScreen1.UnloadedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
@@ -56,6 +57,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(721, 237);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SplashView";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -5,13 +5,11 @@ namespace DedSecDns_Client.Controllers
 {
     internal class MainViewController : Controller
     {
-        public override IView View => _view ?? new MainView();
+        public override IView View => new MainView();
 
         public override bool Loadable()
         {
             return true;
         }
-
-        private IView _view;
     }
 }

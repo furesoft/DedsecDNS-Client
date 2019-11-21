@@ -105,11 +105,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(85, 47);
+            this.label1.Location = new System.Drawing.Point(58, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(300, 29);
+            this.label1.Size = new System.Drawing.Size(379, 29);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Mr. Green B DNS Manager";
+            this.label1.Text = "Projekt TheGreenB DNS Manager";
             // 
             // LoginView
             // 
@@ -125,6 +125,7 @@
             this.Controls.Add(this.loginBtn);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DedSec DNS - Anmelden";
