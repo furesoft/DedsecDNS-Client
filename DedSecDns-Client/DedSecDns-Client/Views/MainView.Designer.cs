@@ -30,19 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainView));
             this.menuPanel = new XanderUI.XUIWidgetPanel();
+            this.searchbarPanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.notificationControl1 = new DedSecDns_Client.Core.Controls.NotificationControl();
             this.logoutBtn = new XanderUI.XUIButton();
             this.tldManageBtn = new XanderUI.XUIButton();
             this.domainMngBtn = new XanderUI.XUIButton();
             this.contentPanel = new XanderUI.XUIWidgetPanel();
-            this.xuiObjectAnimator1 = new XanderUI.XUIObjectAnimator();
-            this.searchbarPanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.welcomePage1 = new DedSecDns_Client.Pages.WelcomePage();
-            this.notificationControl1 = new DedSecDns_Client.Core.Controls.NotificationControl();
+            this.xuiObjectAnimator1 = new XanderUI.XUIObjectAnimator();
             this.menuPanel.SuspendLayout();
-            this.contentPanel.SuspendLayout();
             this.searchbarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.contentPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuPanel
@@ -61,6 +61,35 @@
             this.menuPanel.Padding = new System.Windows.Forms.Padding(5);
             this.menuPanel.Size = new System.Drawing.Size(1214, 59);
             this.menuPanel.TabIndex = 3;
+            // 
+            // searchbarPanel
+            // 
+            this.searchbarPanel.Controls.Add(this.pictureBox1);
+            this.searchbarPanel.Location = new System.Drawing.Point(862, 13);
+            this.searchbarPanel.Name = "searchbarPanel";
+            this.searchbarPanel.Size = new System.Drawing.Size(141, 38);
+            this.searchbarPanel.TabIndex = 7;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(106, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(35, 38);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // notificationControl1
+            // 
+            this.notificationControl1.Location = new System.Drawing.Point(467, 5);
+            this.notificationControl1.Message = "";
+            this.notificationControl1.Name = "notificationControl1";
+            this.notificationControl1.Size = new System.Drawing.Size(354, 46);
+            this.notificationControl1.TabIndex = 6;
+            this.notificationControl1.Visible = false;
             // 
             // logoutBtn
             // 
@@ -142,26 +171,6 @@
             this.contentPanel.Size = new System.Drawing.Size(1214, 533);
             this.contentPanel.TabIndex = 4;
             // 
-            // searchbarPanel
-            // 
-            this.searchbarPanel.Controls.Add(this.pictureBox1);
-            this.searchbarPanel.Location = new System.Drawing.Point(862, 13);
-            this.searchbarPanel.Name = "searchbarPanel";
-            this.searchbarPanel.Size = new System.Drawing.Size(141, 38);
-            this.searchbarPanel.TabIndex = 7;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(106, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 38);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // welcomePage1
             // 
             this.welcomePage1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -170,15 +179,6 @@
             this.welcomePage1.Size = new System.Drawing.Size(1204, 523);
             this.welcomePage1.TabIndex = 0;
             this.welcomePage1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.welcomePage1_KeyDown);
-            // 
-            // notificationControl1
-            // 
-            this.notificationControl1.Location = new System.Drawing.Point(467, 5);
-            this.notificationControl1.Message = "";
-            this.notificationControl1.Name = "notificationControl1";
-            this.notificationControl1.Size = new System.Drawing.Size(354, 46);
-            this.notificationControl1.TabIndex = 6;
-            this.notificationControl1.Visible = false;
             // 
             // MainView
             // 
@@ -190,12 +190,12 @@
             this.Name = "MainView";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DedSecDns -  Manager";
+            this.Text = "Mr. The Green B -  DNS Manager";
             this.Load += new System.EventHandler(this.MainView_Load);
             this.menuPanel.ResumeLayout(false);
-            this.contentPanel.ResumeLayout(false);
             this.searchbarPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.contentPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
