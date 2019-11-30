@@ -1,1 +1,2 @@
-﻿dark: hsl(1, 2, 3);
+﻿background: #525252;
+dark: #414141;
