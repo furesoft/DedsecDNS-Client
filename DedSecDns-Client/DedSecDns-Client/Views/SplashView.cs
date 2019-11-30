@@ -33,7 +33,6 @@ namespace DedSecDns_Client
 
         private async void SplashView_Load(object sender, EventArgs e)
         {
-            Hide();
             xuiSplashScreen1.initializeLoader(this);
 
             Updater.InstallIfAvailable();
