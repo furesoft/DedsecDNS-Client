@@ -46,6 +46,8 @@ namespace DedSecDns_Client.Views
 
         private void MainView_Load(object sender, EventArgs e)
         {
+            ColorScheme.Apply(ColorScheme.Default, this);
+
             CommandRepository.Collect();
         }
 
