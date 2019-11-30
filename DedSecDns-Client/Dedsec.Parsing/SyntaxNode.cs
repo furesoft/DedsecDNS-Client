@@ -1,11 +1,7 @@
 ﻿using Loyc.Syntax;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace DedSecDns_Client.Core.Styling.Parser
+namespace Dedsec.Parsing
 {
     public static class SyntaxNode
     {
@@ -39,6 +35,16 @@ namespace DedSecDns_Client.Core.Styling.Parser
             return F.List(v);
         }
 
+        public static LNode CreateCall(LNode name, IEnumerable<LNode> args)
+        {
+            return F.Call(name, args);
+        }
+
+        public static LNode CreateHex(string color)
+        {
+            return F.Literal("#" + color).WithStyle(NodeStyle.HexLiteral);
+        }
+
         public static LNode CreateID(string id)
         {
             if (!string.IsNullOrEmpty(id))
@@ -47,6 +53,16 @@ namespace DedSecDns_Client.Core.Styling.Parser
             }
 
             return LNode.Missing;
+        }
+
+        public static LNode CreateNum(string val)
+        {
+            return F.Literal(int.Parse(val));
+        }
+
+        public static LNode CreateProp(LNode id, LNode val)
+        {
+            return F.Tuple(id, val);
         }
     }
 }

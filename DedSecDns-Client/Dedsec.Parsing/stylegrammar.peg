@@ -1,0 +1,36 @@
+﻿@classname ColorSchemeParser
+@namespace Dedsec.Parsing
+@using Loyc;
+@using Loyc.Syntax;
+
+@start identifier
+
+
+identifier<LNode> -memoize = id:("" ([a-z_][a-zA-Z_0-9]*)) {SyntaxNode.CreateID(id)}
+
+hexValue<LNode> = "#" val:("" hexChar*) {SyntaxNode.CreateHex(val)}
+hexChar = [0-9A-F]
+number<LNode> = digits:("" [0-9]*) {SyntaxNode.CreateNum(digits)}
+
+property<LNode> -public = id:identifier _o ":" _o val:value _o ";" {SyntaxNode.CreateProp(id, val)} 
+
+value<LNode> = hexValue / callExpression / identifier
+
+callExpression<LNode> -public = id:identifier _o "(" _o args:callparamlist _o ")" {SyntaxNode.CreateCall(id, args)}
+callparamlist<IEnumerable<LNode>> = f:number _o "," _o s:callparamlist {SyntaxNode.Combine(f, s)} / v:number {SyntaxNode.Combine(v) }
+
+
+whitespace = [\t ] / EOL
+_ -memoize = (whitespace / EOL / comment)*
+_o = _?
+
+comment -memoize = singleLineComment / multiLineComment
+
+singleLineComment -memoize -lexical = "//" (!eolChar .)*
+
+multiLineComment -lexical  = "/*" (!"*/" .)* "*/"
+
+eolChar = [\n\r\u2028\u2029]
+
+EOL = '\n' / '\r' / '\r\n'
+EOF = !.  / unexpected:&. #error{ "LLC0001: Unexpected '" + unexpected + "'" }

@@ -1,4 +1,5 @@
-﻿using DedSecDns_Client.Core.Styling.Parser;
+﻿using Dedsec.Parsing;
+using DedSecDns_Client.Core.Styling.Parser;
 using DedSecDns_Client.Properties;
 using System.Collections.Generic;
 using System.Drawing;
@@ -25,6 +26,8 @@ namespace DedSecDns_Client.Core
 
         public static ColorScheme Load(string name, string source)
         {
+            var hex = new ColorSchemeParser().ParseProperty("background: hls(1, 2, 3);");
+
             var style = new CssParser().ParseAll(source);
 
             return new ColorScheme { Name = name, Style = style };
