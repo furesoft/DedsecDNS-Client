@@ -1,6 +1,8 @@
 ﻿using DedSecDns_Client.Controllers;
+using DedSecDns_Client.Core;
 using DedSecDns_Client.Core.MVC;
 using System;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DedSecDns_Client.Views
@@ -35,8 +37,10 @@ namespace DedSecDns_Client.Views
             }
         }
 
-        private void LoginView_Load(object sender, EventArgs e)
+        private async void LoginView_Load(object sender, EventArgs e)
         {
+            Hide();
+
             usernameTb.Focus();
         }
 
