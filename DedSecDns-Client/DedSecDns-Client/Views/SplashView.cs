@@ -1,9 +1,7 @@
 ﻿using DedSecDns_Client.Controllers;
 using DedSecDns_Client.Core;
 using DedSecDns_Client.Core.MVC;
-using nUpdate.Updating;
 using System;
-using System.Globalization;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -35,6 +33,7 @@ namespace DedSecDns_Client
         {
             xuiSplashScreen1.initializeLoader(this);
 
+            Updater.Init();
             Updater.InstallIfAvailable();
 
             await Task.Delay(1500);

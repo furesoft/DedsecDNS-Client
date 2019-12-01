@@ -1,5 +1,6 @@
 ﻿using Loyc.Syntax;
 using System.Collections.Generic;
+using System.Drawing;
 
 namespace Dedsec.Parsing
 {
@@ -42,7 +43,7 @@ namespace Dedsec.Parsing
 
         public static LNode CreateHex(string color)
         {
-            return F.Literal("#" + color).WithStyle(NodeStyle.HexLiteral);
+            return F.Literal(ColorTranslator.FromHtml(color));
         }
 
         public static LNode CreateID(string id)
