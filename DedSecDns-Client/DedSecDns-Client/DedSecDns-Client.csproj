@@ -116,6 +116,7 @@
     <Compile Include="Controllers\SplashController.cs" />
     <Compile Include="Core\ColorScheme.cs" />
     <Compile Include="Core\CommandRepository.cs" />
+    <Compile Include="Core\HashFile.cs" />
     <Compile Include="Core\ICommand.cs" />
     <Compile Include="Core\Controls\NotificationControl.cs">
       <SubType>UserControl</SubType>
