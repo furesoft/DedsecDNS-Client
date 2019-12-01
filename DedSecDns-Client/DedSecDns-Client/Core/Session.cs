@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DedSecDns_Client.Core
 {
     public static class Session
     {
+        public static HashFile Persistent = new HashFile();
+
         public static void Clear()
         {
             _data.Clear();
@@ -17,6 +15,11 @@ namespace DedSecDns_Client.Core
         public static T Get<T>(string key)
         {
             return (T)_data[key];
+        }
+
+        public static void Init()
+        {
+            Persistent.Initialize(".session", 50, 100);
         }
 
         public static void Set(string key, object value)
