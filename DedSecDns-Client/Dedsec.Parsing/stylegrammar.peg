@@ -3,16 +3,17 @@
 @using Loyc;
 @using Loyc.Syntax;
 
-@start identifier
+@start propertyList
 
-
-identifier<LNode> -memoize = id:("" ([a-z_][a-zA-Z_0-9]*)) {SyntaxNode.CreateID(id)}
+identifier<LNode> -memoize = id:("" ([a-zA-Z_][a-zA-Z_0-9]*)) {SyntaxNode.CreateID(id)}
 
 hexValue<LNode> = "#" val:("" hexChar*) {SyntaxNode.CreateHex(val)}
 hexChar = [0-9A-F]
 number<LNode> = digits:("" [0-9]*) {SyntaxNode.CreateNum(digits)}
 
 property<LNode> -public = id:identifier _o ":" _o val:value _o ";" {SyntaxNode.CreateProp(id, val)} 
+propertyList<LNode> -memoize -public = c:propertyList _ p:property {SyntaxNode.Combine(c, p)}
+				/ property
 
 value<LNode> = hexValue / callExpression / identifier
 
