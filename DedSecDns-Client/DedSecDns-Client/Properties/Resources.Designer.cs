@@ -61,7 +61,18 @@ namespace DedSecDns_Client.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die dark: hsl(1, 2, 3); ähnelt.
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap add_to_the_cart {
+            get {
+                object obj = ResourceManager.GetObject("add_to_the_cart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die background: #525252;
+        ///dark: #414141; ähnelt.
         /// </summary>
         internal static string default_colors {
             get {

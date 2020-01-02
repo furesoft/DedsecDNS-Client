@@ -244,6 +244,7 @@
     <Content Include="ColorScheme.txt" />
     <Content Include="FodyWeavers.xml" />
     <Content Include="icon.ico" />
+    <None Include="Resources\add-to-the-cart.png" />
     <Content Include="ToDo.txt" />
   </ItemGroup>
   <ItemGroup>
