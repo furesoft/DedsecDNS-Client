@@ -50,7 +50,7 @@
             this.addDomainBtn.ButtonImage = ((System.Drawing.Image)(resources.GetObject("addDomainBtn.ButtonImage")));
             this.addDomainBtn.ButtonStyle = XanderUI.XUIButton.Style.Material;
             this.addDomainBtn.ButtonText = "";
-            this.addDomainBtn.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(80)))));
+            this.addDomainBtn.ClickBackColor = System.Drawing.Color.Transparent;
             this.addDomainBtn.ClickTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(130)))), ((int)(((byte)(140)))));
             this.addDomainBtn.CornerRadius = 5;
             this.addDomainBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
@@ -71,7 +71,7 @@
             this.removeDomainBtn.ButtonImage = ((System.Drawing.Image)(resources.GetObject("removeDomainBtn.ButtonImage")));
             this.removeDomainBtn.ButtonStyle = XanderUI.XUIButton.Style.Material;
             this.removeDomainBtn.ButtonText = "";
-            this.removeDomainBtn.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(80)))));
+            this.removeDomainBtn.ClickBackColor = System.Drawing.Color.Transparent;
             this.removeDomainBtn.ClickTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(130)))), ((int)(((byte)(140)))));
             this.removeDomainBtn.CornerRadius = 5;
             this.removeDomainBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);

@@ -2,7 +2,6 @@
 using DedSecDns_Client.Core;
 using DedSecDns_Client.Core.MVC;
 using System;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DedSecDns_Client.Views
@@ -41,7 +40,7 @@ namespace DedSecDns_Client.Views
         {
             Hide();
 
-            ColorScheme.Apply(ColorScheme.Default, this);
+            ColorScheme.Apply(ColorScheme.Default, panel1);
 
             usernameTb.Focus();
         }

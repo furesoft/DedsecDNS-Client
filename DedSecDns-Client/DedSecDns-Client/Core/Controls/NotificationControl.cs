@@ -10,8 +10,7 @@ namespace DedSecDns_Client.Core.Controls
             set
             {
                 messageLbl.Text = value;
-                xuiObjectAnimator1.StandardAnimate(borderPanel, XanderUI.XUIObjectAnimator.StandardAnimation.SlideUp, 1500);
-                Show();
+                //xuiObjectAnimator1.StandardAnimate(borderPanel, XanderUI.XUIObjectAnimator.StandardAnimation.SlideUp, 1500);
                 hideTimer.Start();
             }
         }

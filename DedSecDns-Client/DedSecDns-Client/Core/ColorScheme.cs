@@ -26,6 +26,7 @@ namespace DedSecDns_Client.Core
             {
                 c.BackColor = scheme.GetColor("background");
             }
+
             foreach (var btn in c.Controls.OfType<XUIWidgetPanel>())
             {
                 btn.BackColor = scheme.GetColor("dark");

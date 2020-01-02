@@ -36,6 +36,7 @@
             this.usernameTb = new System.Windows.Forms.TextBox();
             this.passwordTb = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // formDropShadow1
@@ -111,6 +112,13 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Projekt TheGreenB DNS Manager";
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(12, 16);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(464, 255);
+            this.panel1.TabIndex = 8;
+            // 
             // LoginView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -123,6 +131,7 @@
             this.Controls.Add(this.PasswordLbl);
             this.Controls.Add(this.usernameLbl);
             this.Controls.Add(this.loginBtn);
+            this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -144,5 +153,6 @@
         private System.Windows.Forms.TextBox passwordTb;
         private System.Windows.Forms.TextBox usernameTb;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -47,7 +47,7 @@ namespace DedSecDns_Client.Views
 
         private void MainView_Load(object sender, EventArgs e)
         {
-            ColorScheme.Apply(ColorScheme.Default, this);
+            ColorScheme.Apply(ColorScheme.Default, panel1);
 
             CommandRepository.Collect();
         }
@@ -58,7 +58,7 @@ namespace DedSecDns_Client.Views
             page.Dock = DockStyle.Fill;
             contentPanel.Controls.Add(page);
 
-            this.xuiObjectAnimator1.StandardAnimate(page, XanderUI.XUIObjectAnimator.StandardAnimation.SlideLeft, 1500);
+            this.xuiObjectAnimator1.StandardAnimate(page, XanderUI.XUIObjectAnimator.StandardAnimation.SlideUp, 35000);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
