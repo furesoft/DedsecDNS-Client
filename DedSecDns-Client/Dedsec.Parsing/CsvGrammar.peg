@@ -1,4 +1,4 @@
-﻿@classname ColorSchemeParser
+﻿@classname CsvGrammar
 @namespace Dedsec.Parsing
 @using Loyc;
 @using Loyc.Syntax;

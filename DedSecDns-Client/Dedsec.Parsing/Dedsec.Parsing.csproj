@@ -60,10 +60,11 @@
     <Compile Include="SyntaxNode.cs" />
   </ItemGroup>
   <ItemGroup>
-    <PegGrammar Include="stylegrammar.peg" />
+    <PegGrammar Include="ColorSchemeGrammar.peg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <PegGrammar Include="CsvGrammar.peg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Pegasus.4.1.0\build\Pegasus.targets" Condition="Exists('..\packages\Pegasus.4.1.0\build\Pegasus.targets')" />

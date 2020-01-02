@@ -1,0 +1,15 @@
+﻿@classname ColorSchemeParser
+@namespace Dedsec.Parsing
+@using Loyc;
+@using Loyc.Syntax;
+
+@start identifier
+
+identifier<LNode> -memoize = id:("" ([a-zA-Z_][a-zA-Z_0-9]*)) {SyntaxNode.CreateID(id)}
+
+number<LNode> = digits:("" [0-9]*) {SyntaxNode.CreateNum(digits)}
+
+
+
+EOL = '\n' / '\r' / '\r\n'
+EOF = !.  / unexpected:&. #error{ "LLC0001: Unexpected '" + unexpected + "'" }
