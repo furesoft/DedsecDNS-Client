@@ -134,6 +134,12 @@
     <Compile Include="Pages\ManageTldPage.Designer.cs">
       <DependentUpon>ManageTldPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ShopPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\ShopPage.Designer.cs">
+      <DependentUpon>ShopPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pages\WelcomePage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -171,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\ManageTldPage.resx">
       <DependentUpon>ManageTldPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ShopPage.resx">
+      <DependentUpon>ShopPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\WelcomePage.resx">
       <DependentUpon>WelcomePage.cs</DependentUpon>

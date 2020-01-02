@@ -83,5 +83,10 @@ namespace DedSecDns_Client.Views
                 ShowSearchBar();
             }
         }
+
+        private void xuiButton1_Click(object sender, EventArgs e)
+        {
+            Navigate(new ShopPage());
+        }
     }
 }
