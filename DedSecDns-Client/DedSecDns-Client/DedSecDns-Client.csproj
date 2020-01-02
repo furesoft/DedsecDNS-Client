@@ -38,6 +38,9 @@
     <ApplicationIcon>icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ChatUI">
+      <HintPath>..\..\..\..\..\OneDrive\Winforms UI Kits\Source\ChatUI\ChatUI Compiled DLL\ChatUI.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -64,6 +67,12 @@
     <Compile Include="Controllers\SplashController.cs" />
     <Compile Include="Core\ColorScheme.cs" />
     <Compile Include="Core\CommandRepository.cs" />
+    <Compile Include="Core\Controls\CartAddedPopup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\Controls\CartAddedPopup.Designer.cs">
+      <DependentUpon>CartAddedPopup.cs</DependentUpon>
+    </Compile>
     <Compile Include="Core\HashFile.cs" />
     <Compile Include="Core\ICommand.cs" />
     <Compile Include="Core\Controls\NotificationControl.cs">
@@ -122,6 +131,12 @@
     <Compile Include="DnsService.cs" />
     <Compile Include="Models\AuthResult.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Pages\CartPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\CartPage.Designer.cs">
+      <DependentUpon>CartPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ManageDomainsPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -146,6 +161,8 @@
     <Compile Include="Pages\WelcomePage.Designer.cs">
       <DependentUpon>WelcomePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Services\Cart.cs" />
+    <Compile Include="Services\NavigationService.cs" />
     <Compile Include="Views\LoginView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,11 +183,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Core\Controls\CartAddedPopup.resx">
+      <DependentUpon>CartAddedPopup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Core\Controls\NotificationControl.resx">
       <DependentUpon>NotificationControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Core\Controls\SearchBarControl.resx">
       <DependentUpon>SearchBarControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\CartPage.resx">
+      <DependentUpon>CartPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\ManageDomainsPage.resx">
       <DependentUpon>ManageDomainsPage.cs</DependentUpon>

@@ -30,17 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainView));
             this.menuPanel = new XanderUI.XUIWidgetPanel();
+            this.shopBtn = new XanderUI.XUIButton();
             this.searchbarPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.notificationControl1 = new DedSecDns_Client.Core.Controls.NotificationControl();
             this.logoutBtn = new XanderUI.XUIButton();
             this.tldManageBtn = new XanderUI.XUIButton();
             this.domainMngBtn = new XanderUI.XUIButton();
             this.contentPanel = new XanderUI.XUIWidgetPanel();
+            this.welcomePage1 = new DedSecDns_Client.Pages.WelcomePage();
             this.xuiObjectAnimator1 = new XanderUI.XUIObjectAnimator();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.shopBtn = new XanderUI.XUIButton();
-            this.welcomePage1 = new DedSecDns_Client.Pages.WelcomePage();
-            this.notificationControl1 = new DedSecDns_Client.Core.Controls.NotificationControl();
             this.menuPanel.SuspendLayout();
             this.searchbarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -65,6 +65,29 @@
             this.menuPanel.Size = new System.Drawing.Size(1214, 59);
             this.menuPanel.TabIndex = 3;
             // 
+            // shopBtn
+            // 
+            this.shopBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(75)))));
+            this.shopBtn.ButtonImage = null;
+            this.shopBtn.ButtonStyle = XanderUI.XUIButton.Style.Material;
+            this.shopBtn.ButtonText = "Shop";
+            this.shopBtn.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(80)))));
+            this.shopBtn.ClickTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(130)))), ((int)(((byte)(140)))));
+            this.shopBtn.CornerRadius = 5;
+            this.shopBtn.Dock = System.Windows.Forms.DockStyle.Left;
+            this.shopBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.shopBtn.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.shopBtn.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
+            this.shopBtn.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
+            this.shopBtn.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.shopBtn.Location = new System.Drawing.Point(248, 5);
+            this.shopBtn.Name = "shopBtn";
+            this.shopBtn.Size = new System.Drawing.Size(112, 49);
+            this.shopBtn.TabIndex = 8;
+            this.shopBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
+            this.shopBtn.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.shopBtn.Click += new System.EventHandler(this.xuiButton1_Click);
+            // 
             // searchbarPanel
             // 
             this.searchbarPanel.Controls.Add(this.pictureBox1);
@@ -84,6 +107,15 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // notificationControl1
+            // 
+            this.notificationControl1.Location = new System.Drawing.Point(467, 5);
+            this.notificationControl1.Message = "";
+            this.notificationControl1.Name = "notificationControl1";
+            this.notificationControl1.Size = new System.Drawing.Size(354, 46);
+            this.notificationControl1.TabIndex = 6;
+            this.notificationControl1.Visible = false;
             // 
             // logoutBtn
             // 
@@ -165,37 +197,6 @@
             this.contentPanel.Size = new System.Drawing.Size(1214, 533);
             this.contentPanel.TabIndex = 4;
             // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 59);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1214, 533);
-            this.panel1.TabIndex = 5;
-            // 
-            // shopBtn
-            // 
-            this.shopBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(75)))));
-            this.shopBtn.ButtonImage = null;
-            this.shopBtn.ButtonStyle = XanderUI.XUIButton.Style.Material;
-            this.shopBtn.ButtonText = "Shop";
-            this.shopBtn.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(80)))));
-            this.shopBtn.ClickTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(130)))), ((int)(((byte)(140)))));
-            this.shopBtn.CornerRadius = 5;
-            this.shopBtn.Dock = System.Windows.Forms.DockStyle.Left;
-            this.shopBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.shopBtn.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.shopBtn.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
-            this.shopBtn.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
-            this.shopBtn.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.shopBtn.Location = new System.Drawing.Point(248, 5);
-            this.shopBtn.Name = "shopBtn";
-            this.shopBtn.Size = new System.Drawing.Size(112, 49);
-            this.shopBtn.TabIndex = 8;
-            this.shopBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
-            this.shopBtn.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            this.shopBtn.Click += new System.EventHandler(this.xuiButton1_Click);
-            // 
             // welcomePage1
             // 
             this.welcomePage1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -205,14 +206,13 @@
             this.welcomePage1.TabIndex = 0;
             this.welcomePage1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.welcomePage1_KeyDown);
             // 
-            // notificationControl1
+            // panel1
             // 
-            this.notificationControl1.Location = new System.Drawing.Point(467, 5);
-            this.notificationControl1.Message = "";
-            this.notificationControl1.Name = "notificationControl1";
-            this.notificationControl1.Size = new System.Drawing.Size(354, 46);
-            this.notificationControl1.TabIndex = 6;
-            this.notificationControl1.Visible = false;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 59);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1214, 533);
+            this.panel1.TabIndex = 5;
             // 
             // MainView
             // 

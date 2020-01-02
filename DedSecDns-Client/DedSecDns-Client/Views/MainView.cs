@@ -4,6 +4,7 @@ using DedSecDns_Client.Core.Controls;
 using DedSecDns_Client.Core.MVC;
 using DedSecDns_Client.Core.Popup;
 using DedSecDns_Client.Pages;
+using DedSecDns_Client.Services;
 using System;
 using System.Windows.Forms;
 using TheArtOfDev.HtmlRenderer.WinForms;
@@ -32,6 +33,15 @@ namespace DedSecDns_Client.Views
             InitializeComponent();
         }
 
+        internal void Navigate(UserControl page)
+        {
+            contentPanel.Controls.Clear();
+            page.Dock = DockStyle.Fill;
+            contentPanel.Controls.Add(page);
+
+            this.xuiObjectAnimator1.StandardAnimate(page, XanderUI.XUIObjectAnimator.StandardAnimation.SlideUp, 35000);
+        }
+
         private void domainMngBtn_Click(object sender, System.EventArgs e)
         {
             Navigate(new ManageDomainsPage());
@@ -47,18 +57,11 @@ namespace DedSecDns_Client.Views
 
         private void MainView_Load(object sender, EventArgs e)
         {
+            NavigationService.Init(this);
+
             ColorScheme.Apply(ColorScheme.Default, panel1);
 
             CommandRepository.Collect();
-        }
-
-        private void Navigate(UserControl page)
-        {
-            contentPanel.Controls.Clear();
-            page.Dock = DockStyle.Fill;
-            contentPanel.Controls.Add(page);
-
-            this.xuiObjectAnimator1.StandardAnimate(page, XanderUI.XUIObjectAnimator.StandardAnimation.SlideUp, 35000);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
