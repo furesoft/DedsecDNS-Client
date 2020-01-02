@@ -46,7 +46,7 @@
             // 
             // addDomainBtn
             // 
-            this.addDomainBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(75)))));
+            this.addDomainBtn.BackgroundColor = System.Drawing.Color.Transparent;
             this.addDomainBtn.ButtonImage = ((System.Drawing.Image)(resources.GetObject("addDomainBtn.ButtonImage")));
             this.addDomainBtn.ButtonStyle = XanderUI.XUIButton.Style.Material;
             this.addDomainBtn.ButtonText = "";
@@ -67,7 +67,7 @@
             // 
             // removeDomainBtn
             // 
-            this.removeDomainBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(75)))));
+            this.removeDomainBtn.BackgroundColor = System.Drawing.Color.Transparent;
             this.removeDomainBtn.ButtonImage = ((System.Drawing.Image)(resources.GetObject("removeDomainBtn.ButtonImage")));
             this.removeDomainBtn.ButtonStyle = XanderUI.XUIButton.Style.Material;
             this.removeDomainBtn.ButtonText = "";

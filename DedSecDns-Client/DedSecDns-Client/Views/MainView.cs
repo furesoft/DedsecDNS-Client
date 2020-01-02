@@ -6,6 +6,7 @@ using DedSecDns_Client.Core.Popup;
 using DedSecDns_Client.Pages;
 using System;
 using System.Windows.Forms;
+using TheArtOfDev.HtmlRenderer.WinForms;
 
 namespace DedSecDns_Client.Views
 {

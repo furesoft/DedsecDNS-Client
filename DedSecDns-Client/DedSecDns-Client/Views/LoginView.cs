@@ -41,6 +41,8 @@ namespace DedSecDns_Client.Views
         {
             Hide();
 
+            ColorScheme.Apply(ColorScheme.Default, this);
+
             usernameTb.Focus();
         }
 
