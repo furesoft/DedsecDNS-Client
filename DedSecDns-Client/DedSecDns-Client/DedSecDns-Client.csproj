@@ -67,6 +67,9 @@
     <Compile Include="Controllers\SplashController.cs" />
     <Compile Include="Core\ColorScheme.cs" />
     <Compile Include="Core\CommandRepository.cs" />
+    <Compile Include="Core\Controls\AddToCartButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Core\Controls\CartAddedPopup.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -245,6 +248,9 @@
     <Content Include="FodyWeavers.xml" />
     <Content Include="icon.ico" />
     <None Include="Resources\add-to-the-cart.png" />
+    <None Include="Resources\credit-cards-payment.png" />
+    <None Include="Resources\ok-mark.png" />
+    <None Include="Resources\shopping-cart.png" />
     <Content Include="ToDo.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -279,6 +285,9 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Windows.SDK.Contracts">
       <Version>10.0.18362.2005</Version>
+    </PackageReference>
+    <PackageReference Include="NBitpayClient">
+      <Version>1.0.0.35</Version>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>12.0.3</Version>

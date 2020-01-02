@@ -1,5 +1,6 @@
 ﻿using DedSecDns_Client.Core;
 using DedSecDns_Client.Models;
+using NBitpayClient;
 using Newtonsoft.Json;
 using RestSharp;
 using System.IdentityModel.Tokens.Jwt;

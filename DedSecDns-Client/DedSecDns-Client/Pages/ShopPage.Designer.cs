@@ -32,6 +32,7 @@
             this.htmlLabel1 = new TheArtOfDev.HtmlRenderer.WinForms.HtmlLabel();
             this.cartBtn = new XanderUI.XUIButton();
             this.button1 = new System.Windows.Forms.Button();
+            this.addToCartButton1 = new DedSecDns_Client.Core.Controls.AddToCartButton();
             this.SuspendLayout();
             // 
             // htmlLabel1
@@ -77,10 +78,31 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // addToCartButton1
+            // 
+            this.addToCartButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(75)))));
+            this.addToCartButton1.ButtonImage = ((System.Drawing.Image)(resources.GetObject("addToCartButton1.ButtonImage")));
+            this.addToCartButton1.ButtonStyle = XanderUI.XUIButton.Style.Material;
+            this.addToCartButton1.ButtonText = "Zum Warenkorb hinzufügen";
+            this.addToCartButton1.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(80)))));
+            this.addToCartButton1.ClickTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(130)))), ((int)(((byte)(140)))));
+            this.addToCartButton1.CornerRadius = 5;
+            this.addToCartButton1.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.addToCartButton1.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
+            this.addToCartButton1.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
+            this.addToCartButton1.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.addToCartButton1.Location = new System.Drawing.Point(510, 234);
+            this.addToCartButton1.Name = "addToCartButton1";
+            this.addToCartButton1.Size = new System.Drawing.Size(167, 50);
+            this.addToCartButton1.TabIndex = 3;
+            this.addToCartButton1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
+            this.addToCartButton1.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            // 
             // ShopPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.addToCartButton1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cartBtn);
             this.Controls.Add(this.htmlLabel1);
@@ -97,5 +119,6 @@
         private TheArtOfDev.HtmlRenderer.WinForms.HtmlLabel htmlLabel1;
         private XanderUI.XUIButton cartBtn;
         private System.Windows.Forms.Button button1;
+        private Core.Controls.AddToCartButton addToCartButton1;
     }
 }
