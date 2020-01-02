@@ -37,7 +37,7 @@ namespace DedSecDns_Client.Views
             }
         }
 
-        private async void LoginView_Load(object sender, EventArgs e)
+        private void LoginView_Load(object sender, EventArgs e)
         {
             Hide();
 
