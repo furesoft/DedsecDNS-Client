@@ -71,7 +71,7 @@
             this.xuiButton1.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.xuiButton1.HoverTextColor = System.Drawing.Color.DodgerBlue;
             this.xuiButton1.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.xuiButton1.Location = new System.Drawing.Point(659, 450);
+            this.xuiButton1.Location = new System.Drawing.Point(660, 436);
             this.xuiButton1.Name = "xuiButton1";
             this.xuiButton1.Size = new System.Drawing.Size(200, 50);
             this.xuiButton1.TabIndex = 3;
