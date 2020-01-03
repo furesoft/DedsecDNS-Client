@@ -69,6 +69,7 @@
             // usernameLbl
             // 
             this.usernameLbl.AutoSize = true;
+            this.usernameLbl.BackColor = System.Drawing.Color.Transparent;
             this.usernameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameLbl.Location = new System.Drawing.Point(25, 119);
             this.usernameLbl.Name = "usernameLbl";
@@ -79,6 +80,7 @@
             // PasswordLbl
             // 
             this.PasswordLbl.AutoSize = true;
+            this.PasswordLbl.BackColor = System.Drawing.Color.Transparent;
             this.PasswordLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordLbl.Location = new System.Drawing.Point(25, 159);
             this.PasswordLbl.Name = "PasswordLbl";
@@ -105,6 +107,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(58, 48);
             this.label1.Name = "label1";
@@ -126,10 +129,10 @@
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(488, 283);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.passwordTb);
-            this.Controls.Add(this.usernameTb);
             this.Controls.Add(this.PasswordLbl);
             this.Controls.Add(this.usernameLbl);
+            this.Controls.Add(this.passwordTb);
+            this.Controls.Add(this.usernameTb);
             this.Controls.Add(this.loginBtn);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
