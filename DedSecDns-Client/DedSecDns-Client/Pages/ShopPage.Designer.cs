@@ -32,6 +32,7 @@
             this.htmlLabel1 = new TheArtOfDev.HtmlRenderer.WinForms.HtmlLabel();
             this.cartBtn = new XanderUI.XUIButton();
             this.productListView = new System.Windows.Forms.FlowLayoutPanel();
+            this.categoriesCb = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // htmlLabel1
@@ -79,10 +80,23 @@
             this.productListView.TabIndex = 4;
             this.productListView.WrapContents = false;
             // 
+            // categoriesCb
+            // 
+            this.categoriesCb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.categoriesCb.FormattingEnabled = true;
+            this.categoriesCb.Items.AddRange(new object[] {
+            "Alle"});
+            this.categoriesCb.Location = new System.Drawing.Point(455, 35);
+            this.categoriesCb.Name = "categoriesCb";
+            this.categoriesCb.Size = new System.Drawing.Size(179, 24);
+            this.categoriesCb.TabIndex = 5;
+            this.categoriesCb.SelectedIndexChanged += new System.EventHandler(this.categoriesCb_SelectedIndexChanged);
+            // 
             // ShopPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.categoriesCb);
             this.Controls.Add(this.productListView);
             this.Controls.Add(this.cartBtn);
             this.Controls.Add(this.htmlLabel1);
@@ -99,5 +113,6 @@
         private TheArtOfDev.HtmlRenderer.WinForms.HtmlLabel htmlLabel1;
         private XanderUI.XUIButton cartBtn;
         private System.Windows.Forms.FlowLayoutPanel productListView;
+        private System.Windows.Forms.ComboBox categoriesCb;
     }
 }

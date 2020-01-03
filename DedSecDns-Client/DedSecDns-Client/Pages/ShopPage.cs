@@ -2,7 +2,6 @@
 using DedSecDns_Client.Core.Controls;
 using DedSecDns_Client.Core.Popup;
 using DedSecDns_Client.Models;
-using DedSecDns_Client.Properties;
 using DedSecDns_Client.Services;
 using System;
 using System.Collections.Generic;
@@ -42,15 +41,31 @@ namespace DedSecDns_Client.Pages
             NavigationService.Navigate(new CartPage());
         }
 
-        private void FillProductLine(int start)
+        private void categoriesCb_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            productListView.Controls.Clear();
+
+            IEnumerable<Product> products;
+
+            if (categoriesCb.SelectedIndex == 0)
+            {
+                products = ProductRepository.GetAll();
+            }
+            else
+            {
+                products = ProductRepository.GetByCategory(categoriesCb.SelectedIndex - 1);
+            }
+
+            FillProductsView(products);
+        }
+
+        private void FillProductLine(int start, IEnumerable<Product> products)
         {
             var lineView = new FlowLayoutPanel();
             lineView.FlowDirection = FlowDirection.LeftToRight;
             lineView.AutoScroll = true;
             lineView.AutoSize = true;
             lineView.WrapContents = false;
-
-            var products = ProductRepository.GetProducts(start);
 
             FillProductsToView(products, lineView);
 
@@ -71,13 +86,31 @@ namespace DedSecDns_Client.Pages
             }
         }
 
+        private void FillProductsView(IEnumerable<Product> products)
+        {
+            int count = 0;
+
+            while (count <= products.Count())
+            {
+                FillProductLine(count, products.Take(5));
+                count += 5;
+            }
+        }
+
         private void ShopPage_Load(object sender, System.EventArgs e)
         {
             Cart.Init(this);
             ProductRepository.Init();
 
-            FillProductLine(0);
-            FillProductLine(6);
+            ProductRepository.AddCategory("Obst");
+            ProductRepository.AddCategory("Technik");
+
+            var cats = ProductRepository.GetCategorys();
+            categoriesCb.Items.AddRange(cats);
+
+            //ToDo: load all products in view
+            var products = ProductRepository.GetAll();
+            FillProductsView(products);
         }
     }
 }
