@@ -59,7 +59,7 @@ namespace DedSecDns_Client.Views
         {
             NavigationService.Init(this);
 
-            ColorScheme.Apply(ColorScheme.Default, panel1);
+            UIStyle.Apply(UIStyle.Default, panel1);
 
             CommandRepository.Collect();
         }

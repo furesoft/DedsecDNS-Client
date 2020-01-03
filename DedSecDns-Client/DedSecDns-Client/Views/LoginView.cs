@@ -40,7 +40,7 @@ namespace DedSecDns_Client.Views
         {
             Hide();
 
-            ColorScheme.Apply(ColorScheme.Default, panel1);
+            UIStyle.Apply(UIStyle.Default, panel1);
 
             usernameTb.Focus();
         }

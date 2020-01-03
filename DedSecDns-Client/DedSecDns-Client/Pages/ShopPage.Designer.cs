@@ -80,7 +80,7 @@
             this.addToCartButton1.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
             this.addToCartButton1.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
             this.addToCartButton1.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.addToCartButton1.Location = new System.Drawing.Point(510, 234);
+            this.addToCartButton1.Location = new System.Drawing.Point(335, 145);
             this.addToCartButton1.Name = "addToCartButton1";
             this.addToCartButton1.Size = new System.Drawing.Size(167, 50);
             this.addToCartButton1.TabIndex = 3;
