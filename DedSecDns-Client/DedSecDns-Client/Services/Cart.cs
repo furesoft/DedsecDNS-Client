@@ -1,5 +1,6 @@
 ﻿using DedSecDns_Client.Models;
 using DedSecDns_Client.Pages;
+using System;
 using System.Collections.Generic;
 
 namespace DedSecDns_Client.Services
@@ -21,6 +22,11 @@ namespace DedSecDns_Client.Services
         public static void Init(ShopPage page)
         {
             _page = page;
+        }
+
+        public static void RemoveProduct(int id)
+        {
+            _products.RemoveAt(id);
         }
 
         public static void ShowInfo()

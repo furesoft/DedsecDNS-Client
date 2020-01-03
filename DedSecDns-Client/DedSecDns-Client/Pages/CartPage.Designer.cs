@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.htmlLabel1 = new TheArtOfDev.HtmlRenderer.WinForms.HtmlLabel();
-            this.productlList = new System.Windows.Forms.TableLayoutPanel();
             this.xuiButton1 = new XanderUI.XUIButton();
+            this.productlList = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // htmlLabel1
@@ -44,19 +44,6 @@
             this.htmlLabel1.Size = new System.Drawing.Size(876, 65);
             this.htmlLabel1.TabIndex = 1;
             this.htmlLabel1.Text = "<h2>Warenkorb</h2>";
-            // 
-            // productlList
-            // 
-            this.productlList.ColumnCount = 2;
-            this.productlList.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.productlList.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.productlList.Location = new System.Drawing.Point(26, 111);
-            this.productlList.Name = "productlList";
-            this.productlList.RowCount = 2;
-            this.productlList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.productlList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.productlList.Size = new System.Drawing.Size(823, 102);
-            this.productlList.TabIndex = 2;
             // 
             // xuiButton1
             // 
@@ -78,15 +65,26 @@
             this.xuiButton1.TextColor = System.Drawing.Color.DodgerBlue;
             this.xuiButton1.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             // 
+            // productlList
+            // 
+            this.productlList.AutoScroll = true;
+            this.productlList.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.productlList.Location = new System.Drawing.Point(32, 101);
+            this.productlList.Name = "productlList";
+            this.productlList.Size = new System.Drawing.Size(801, 307);
+            this.productlList.TabIndex = 4;
+            this.productlList.WrapContents = false;
+            // 
             // CartPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.xuiButton1);
             this.Controls.Add(this.productlList);
+            this.Controls.Add(this.xuiButton1);
             this.Controls.Add(this.htmlLabel1);
             this.Name = "CartPage";
             this.Size = new System.Drawing.Size(876, 500);
+            this.Load += new System.EventHandler(this.CartPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -95,7 +93,7 @@
         #endregion
 
         private TheArtOfDev.HtmlRenderer.WinForms.HtmlLabel htmlLabel1;
-        private System.Windows.Forms.TableLayoutPanel productlList;
         private XanderUI.XUIButton xuiButton1;
+        private System.Windows.Forms.FlowLayoutPanel productlList;
     }
 }

@@ -65,6 +65,12 @@
     <Compile Include="Controllers\LoginViewController.cs" />
     <Compile Include="Controllers\MainViewController.cs" />
     <Compile Include="Controllers\SplashController.cs" />
+    <Compile Include="Core\Controls\CartLineControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\Controls\CartLineControl.Designer.cs">
+      <DependentUpon>CartLineControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Core\Controls\ProductControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -196,6 +202,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Core\Controls\CartAddedPopup.resx">
       <DependentUpon>CartAddedPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Controls\CartLineControl.resx">
+      <DependentUpon>CartLineControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Core\Controls\NotificationControl.resx">
       <DependentUpon>NotificationControl.cs</DependentUpon>
