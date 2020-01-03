@@ -20,6 +20,7 @@ namespace DedSecDns_Client.Core.Controls
 
         private void AddToCartButton_Click(object sender, EventArgs e)
         {
+            Cart.AddProduct(ProductRepository.GetByID((int)Tag));
             //ToDo: implement addtocart button click: use tag as product id, add product from availableproducts collection
             Cart.ShowInfo();
         }
