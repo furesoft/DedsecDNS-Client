@@ -28,20 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.nameLbl = new System.Windows.Forms.Label();
+            this.numLbl = new System.Windows.Forms.Label();
             this.priceLbl = new System.Windows.Forms.Label();
             this.removeLink = new System.Windows.Forms.LinkLabel();
+            this.nameLbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // nameLbl
+            // numLbl
             // 
-            this.nameLbl.AutoSize = true;
-            this.nameLbl.Dock = System.Windows.Forms.DockStyle.Left;
-            this.nameLbl.Location = new System.Drawing.Point(0, 0);
-            this.nameLbl.Name = "nameLbl";
-            this.nameLbl.Size = new System.Drawing.Size(46, 17);
-            this.nameLbl.TabIndex = 0;
-            this.nameLbl.Text = "label1";
+            this.numLbl.AutoSize = true;
+            this.numLbl.Dock = System.Windows.Forms.DockStyle.Left;
+            this.numLbl.Location = new System.Drawing.Point(0, 0);
+            this.numLbl.Name = "numLbl";
+            this.numLbl.Size = new System.Drawing.Size(46, 17);
+            this.numLbl.TabIndex = 0;
+            this.numLbl.Text = "label1";
             // 
             // priceLbl
             // 
@@ -64,15 +65,27 @@
             this.removeLink.Text = "Entfernen";
             this.removeLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.removeLink_LinkClicked);
             // 
+            // nameLbl
+            // 
+            this.nameLbl.AutoSize = true;
+            this.nameLbl.Dock = System.Windows.Forms.DockStyle.Left;
+            this.nameLbl.Location = new System.Drawing.Point(46, 0);
+            this.nameLbl.Name = "nameLbl";
+            this.nameLbl.Size = new System.Drawing.Size(46, 17);
+            this.nameLbl.TabIndex = 3;
+            this.nameLbl.Text = "label1";
+            // 
             // CartLineControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.nameLbl);
             this.Controls.Add(this.removeLink);
             this.Controls.Add(this.priceLbl);
-            this.Controls.Add(this.nameLbl);
+            this.Controls.Add(this.numLbl);
             this.Name = "CartLineControl";
             this.Size = new System.Drawing.Size(382, 44);
+            this.Load += new System.EventHandler(this.CartLineControl_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -80,8 +93,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Label nameLbl;
+        private System.Windows.Forms.Label numLbl;
         private System.Windows.Forms.Label priceLbl;
         private System.Windows.Forms.LinkLabel removeLink;
+        private System.Windows.Forms.Label nameLbl;
     }
 }
