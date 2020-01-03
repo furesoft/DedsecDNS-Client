@@ -34,7 +34,7 @@ namespace DedSecDns_Client
             xuiSplashScreen1.initializeLoader(this);
 
             Updater.Init();
-            Updater.InstallIfAvailable();
+            //Updater.InstallIfAvailable();
 
             await Task.Delay(1500);
 

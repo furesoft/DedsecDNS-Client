@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShopPage));
             this.htmlLabel1 = new TheArtOfDev.HtmlRenderer.WinForms.HtmlLabel();
             this.cartBtn = new XanderUI.XUIButton();
-            this.button1 = new System.Windows.Forms.Button();
             this.addToCartButton1 = new DedSecDns_Client.Core.Controls.AddToCartButton();
             this.SuspendLayout();
             // 
@@ -40,15 +39,15 @@
             this.htmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.htmlLabel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.htmlLabel1.BaseStylesheet = null;
-            this.htmlLabel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.htmlLabel1.Location = new System.Drawing.Point(0, 0);
             this.htmlLabel1.Name = "htmlLabel1";
-            this.htmlLabel1.Size = new System.Drawing.Size(863, 65);
+            this.htmlLabel1.Size = new System.Drawing.Size(65, 65);
             this.htmlLabel1.TabIndex = 0;
             this.htmlLabel1.Text = "<h2>Shop</h2>";
             // 
             // cartBtn
             // 
+            this.cartBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cartBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.cartBtn.ButtonImage = ((System.Drawing.Image)(resources.GetObject("cartBtn.ButtonImage")));
             this.cartBtn.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
@@ -67,16 +66,6 @@
             this.cartBtn.TextColor = System.Drawing.Color.DodgerBlue;
             this.cartBtn.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             this.cartBtn.Click += new System.EventHandler(this.cartBtn_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(384, 234);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // addToCartButton1
             // 
@@ -103,7 +92,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.addToCartButton1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.cartBtn);
             this.Controls.Add(this.htmlLabel1);
             this.Name = "ShopPage";
@@ -118,7 +106,6 @@
 
         private TheArtOfDev.HtmlRenderer.WinForms.HtmlLabel htmlLabel1;
         private XanderUI.XUIButton cartBtn;
-        private System.Windows.Forms.Button button1;
         private Core.Controls.AddToCartButton addToCartButton1;
     }
 }
