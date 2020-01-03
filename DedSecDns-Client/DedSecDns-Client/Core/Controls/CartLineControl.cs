@@ -22,7 +22,9 @@ namespace DedSecDns_Client.Core.Controls
         {
             InitializeComponent();
         }
+
         public event EventHandler OnProductRemoved;
+
         private void removeLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             int id = (int)Tag;

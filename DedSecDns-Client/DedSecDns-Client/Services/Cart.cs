@@ -26,7 +26,7 @@ namespace DedSecDns_Client.Services
 
         public static void RemoveProduct(int id)
         {
-            _products.RemoveAt(id);
+            _products.RemoveAt(id - 1);
         }
 
         public static void ShowInfo()

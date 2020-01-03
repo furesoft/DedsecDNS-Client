@@ -32,6 +32,10 @@ namespace DedSecDns_Client.Pages
                 wrapperControl.Tag = i;
                 wrapperControl.ProductPrice = p.Price.ToString("{0} EUR");
                 wrapperControl.ProductName = p.Name;
+                wrapperControl.OnProductRemoved += (s, ee) =>
+                {
+                    productlList.Controls.Remove(wrapperControl);
+                };
 
                 productlList.Controls.Add(wrapperControl);
             }
