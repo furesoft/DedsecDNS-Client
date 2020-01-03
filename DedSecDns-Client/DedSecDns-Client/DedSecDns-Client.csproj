@@ -65,6 +65,13 @@
     <Compile Include="Controllers\LoginViewController.cs" />
     <Compile Include="Controllers\MainViewController.cs" />
     <Compile Include="Controllers\SplashController.cs" />
+    <Compile Include="Core\Controls\ProductControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\Controls\ProductControl.Designer.cs">
+      <DependentUpon>ProductControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\ProductRepository.cs" />
     <Compile Include="Core\UIStyle.cs" />
     <Compile Include="Core\CommandRepository.cs" />
     <Compile Include="Core\Controls\AddToCartButton.cs">
@@ -133,6 +140,7 @@
     <Compile Include="Core\Updater.cs" />
     <Compile Include="DnsService.cs" />
     <Compile Include="Models\AuthResult.cs" />
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Pages\CartPage.cs">
       <SubType>UserControl</SubType>
@@ -191,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Core\Controls\NotificationControl.resx">
       <DependentUpon>NotificationControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Controls\ProductControl.resx">
+      <DependentUpon>ProductControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Core\Controls\SearchBarControl.resx">
       <DependentUpon>SearchBarControl.cs</DependentUpon>
