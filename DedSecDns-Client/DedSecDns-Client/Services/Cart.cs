@@ -1,4 +1,5 @@
-﻿using DedSecDns_Client.Pages;
+﻿using DedSecDns_Client.Models;
+using DedSecDns_Client.Pages;
 using System.Collections.Generic;
 
 namespace DedSecDns_Client.Services
@@ -12,7 +13,7 @@ namespace DedSecDns_Client.Services
             ShowInfo();
         }
 
-        public static List<object> GetProducts()
+        public static List<Product> GetProducts()
         {
             return _products;
         }
@@ -28,6 +29,6 @@ namespace DedSecDns_Client.Services
         }
 
         private static ShopPage _page;
-        private static List<object> _products = new List<object>();
+        private static List<Product> _products = new List<Product>();
     }
 }
