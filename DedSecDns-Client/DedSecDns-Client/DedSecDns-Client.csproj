@@ -65,7 +65,7 @@
     <Compile Include="Controllers\LoginViewController.cs" />
     <Compile Include="Controllers\MainViewController.cs" />
     <Compile Include="Controllers\SplashController.cs" />
-    <Compile Include="Core\ColorScheme.cs" />
+    <Compile Include="Core\UIStyle.cs" />
     <Compile Include="Core\CommandRepository.cs" />
     <Compile Include="Core\Controls\AddToCartButton.cs">
       <SubType>Component</SubType>

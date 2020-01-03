@@ -60,7 +60,7 @@
     <Compile Include="SyntaxNode.cs" />
   </ItemGroup>
   <ItemGroup>
-    <PegGrammar Include="ColorSchemeGrammar.peg" />
+    <PegGrammar Include="StyleGrammar.peg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

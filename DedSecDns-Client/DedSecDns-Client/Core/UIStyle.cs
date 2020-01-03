@@ -10,13 +10,13 @@ using XanderUI;
 
 namespace DedSecDns_Client.Core
 {
-    internal class ColorScheme
+    internal class UIStyle
     {
-        public static ColorScheme Default = Load("default", Resources.default_colors);
+        public static UIStyle Default = Load("default", Resources.default_colors);
         public string Name { get; set; }
         public LNode Style { get; set; }
 
-        public static void Apply(ColorScheme scheme, Control c)
+        public static void Apply(UIStyle scheme, Control c)
         {
             if (c is Form)
             {
@@ -37,12 +37,12 @@ namespace DedSecDns_Client.Core
             }
         }
 
-        public static ColorScheme Load(string name, string source)
+        public static UIStyle Load(string name, string source)
         {
-            var p = new ColorSchemeParser();
+            var p = new StyleParser();
             var style = p.Parse(source);
 
-            return new ColorScheme { Name = name, Style = style };
+            return new UIStyle { Name = name, Style = style };
         }
 
         public Color GetColor(string key)
