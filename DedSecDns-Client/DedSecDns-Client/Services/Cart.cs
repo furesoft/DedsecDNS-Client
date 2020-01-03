@@ -6,7 +6,7 @@ namespace DedSecDns_Client.Services
 {
     public static class Cart
     {
-        public static void AddProduct(object product)
+        public static void AddProduct(Product product)
         {
             _products.Add(product);
 

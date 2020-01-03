@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.htmlLabel1 = new TheArtOfDev.HtmlRenderer.WinForms.HtmlLabel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.productlList = new System.Windows.Forms.TableLayoutPanel();
             this.xuiButton1 = new XanderUI.XUIButton();
             this.SuspendLayout();
             // 
@@ -45,18 +45,18 @@
             this.htmlLabel1.TabIndex = 1;
             this.htmlLabel1.Text = "<h2>Warenkorb</h2>";
             // 
-            // tableLayoutPanel1
+            // productlList
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(93, 113);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(681, 281);
-            this.tableLayoutPanel1.TabIndex = 2;
+            this.productlList.ColumnCount = 2;
+            this.productlList.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.productlList.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.productlList.Location = new System.Drawing.Point(26, 111);
+            this.productlList.Name = "productlList";
+            this.productlList.RowCount = 2;
+            this.productlList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.productlList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.productlList.Size = new System.Drawing.Size(823, 102);
+            this.productlList.TabIndex = 2;
             // 
             // xuiButton1
             // 
@@ -83,7 +83,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.xuiButton1);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.productlList);
             this.Controls.Add(this.htmlLabel1);
             this.Name = "CartPage";
             this.Size = new System.Drawing.Size(876, 500);
@@ -95,7 +95,7 @@
         #endregion
 
         private TheArtOfDev.HtmlRenderer.WinForms.HtmlLabel htmlLabel1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel productlList;
         private XanderUI.XUIButton xuiButton1;
     }
 }
