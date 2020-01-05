@@ -65,6 +65,7 @@
     <Compile Include="Controllers\LoginViewController.cs" />
     <Compile Include="Controllers\MainViewController.cs" />
     <Compile Include="Controllers\SplashController.cs" />
+    <Compile Include="Core\Adorner.cs" />
     <Compile Include="Core\Controls\CartLineControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
